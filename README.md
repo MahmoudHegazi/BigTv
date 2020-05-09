@@ -7,4 +7,4 @@ AJAX Search Function (with jquery):
 <img src="mysearch.PNG">
 
 #app 
-<img src="final.PNG">
+<img src="Fianl.PNG">
