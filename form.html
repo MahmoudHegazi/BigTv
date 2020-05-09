@@ -1,0 +1,84 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX Example</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<script src="{{ url_for('static', filename='js/new1.js') }}"></script>
+	
+	<style>
+	.flash {
+	background-color: transparent;
+	width:100%;
+	text-decoration: none;
+
+}
+
+.flash li {
+	list-style-type: none;
+	text-align: center;
+
+}
+
+.closebtn {
+  cursor: pointer;
+}
+	</style>
+</head>
+<body>
+
+<div class = 'flash'>
+		      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          
+        <ul>
+        {% for message in messages %}
+            <li class="alert alert-info">
+            <strong> {{ message }} </strong>
+            <span class="closebtn" >&times;</span> 
+            </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+
+<script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+</script>
+</div>
+<div class="container">
+	<br><br><br><br>
+	<form class="form-inline">
+	  <div class="form-group">
+	    <label class="sr-only" for="nameInput">Search</label>
+	    <input type="text" class="form-control" id="nameInput" placeholder="search" name="search">
+	  </div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+	</form>
+	<br>
+    <a id="mylink" href="">
+	<div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+	</a>
+	
+	<div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+
+</div>
+</body>
+</html>
