@@ -12,7 +12,7 @@ AJAX Search Function (with jquery):
 <img src="mysearchs.PNG">
 <img src="movie.PNG">
 
-#app 
+# app 
 <img src="Fianl.PNG">
 <img src="part1.PNG">
 
