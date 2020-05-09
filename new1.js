@@ -18,9 +18,11 @@ $(document).ready(function() {
 				
 			}
 			else {
-				$('#successAlert').text(data.search).show();
+				$('#successAlert').show();		
+				$('#sucessText').text(data.name).show();
 				$('#errorAlert').hide();
 				$("#mylink").attr("href", data.search);
+				$("#myimage").attr("src", data.iurl);
 			}	
 
 		});
