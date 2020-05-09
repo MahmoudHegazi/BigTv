@@ -4,7 +4,7 @@ try /JSON extension to see JSON end points
 
 AJAX Search Function (with jquery):
 <img src="mysearchs.PNG">
-<img src="mysearch.PNG">
+<img src="movie.PNG">
 
 #app 
 <img src="Fianl.PNG">
