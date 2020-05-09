@@ -81,6 +81,24 @@ def showprocess():
         myseries =  session.query(Series).filter_by(name=mytag).first()
         mymovie =  session.query(Movie).filter_by(name=mytag).first()
         myeposide =  session.query(Item).filter_by(name=mytag).first()
+        get1 =  session.query(Item).filter_by(tag1=mytag).first()
+        get2 =  session.query(Item).filter_by(tag2=mytag).first()
+        get3 =  session.query(Item).filter_by(tag3=mytag).first()
+        get4 =  session.query(Item).filter_by(tag4=mytag).first()
+        get5 =  session.query(Item).filter_by(tag5=mytag).first()
+        get6 =  session.query(Item).filter_by(tag6=mytag).first()
+        get7 =  session.query(Item).filter_by(tag7=mytag).first()
+        get8 =  session.query(Item).filter_by(tag8=mytag).first()
+        get9 =  session.query(Item).filter_by(tag9=mytag).first()
+        get10 =  session.query(Item).filter_by(tag10=mytag).first()
+        get11 =  session.query(Item).filter_by(tag11=mytag).first()
+        get12 =  session.query(Item).filter_by(tag12=mytag).first()
+        get13 =  session.query(Item).filter_by(tag13=mytag).first()
+        get14 =  session.query(Item).filter_by(tag14=mytag).first()
+        get15 =  session.query(Item).filter_by(tag15=mytag).first()
+        get16 =  session.query(Item).filter_by(tag16=mytag).first()
+        get17 =  session.query(Item).filter_by(tag17=mytag).first()
+
         
         # if seires != none return json with series link
         if myseries:
@@ -103,6 +121,107 @@ def showprocess():
             cname = 'An Eposide Founded with name %s' %myeposide.name
             return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
             
+        if get1:
+            message = get1.server1
+            imge = get1.image
+            cname = 'An Eposide Founded with name %s' %get1.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+
+        if get2:
+            message = get2.server1
+            imge = get2.image
+            cname = 'An Eposide Founded with name %s' %get2.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+ 
+        if get3:
+            message = get3.server1
+            imge = get3.image
+            cname = 'An Eposide Founded with name %s' %get3.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+
+        if get4:
+            message = get4.server1
+            imge = get4.image
+            cname = 'An Eposide Founded with name %s' %get4.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+
+        if get5:
+            message = get5.server1
+            imge = get5.image
+            cname = 'An Eposide Founded with name %s' %get5.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+ 
+        if get6:
+            message = get6.server1
+            imge = get6.image
+            cname = 'An Eposide Founded with name %s' %get6.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+ 
+        if get7:
+            message = get7.server1
+            imge = get7.image
+            cname = 'An Eposide Founded with name %s' %get7.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+
+        if get8:
+            message = get8.server1
+            imge = get8.image
+            cname = 'An Eposide Founded with name %s' %get8.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+
+        if get9:
+            message = get9.server1
+            imge = get9.image
+            cname = 'An Eposide Founded with name %s' %get9.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            
+        if get10:
+            message = get10.server1
+            imge = get10.image
+            cname = 'An Eposide Founded with name %s' %get10.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+
+        if get11:
+            message = get11.server1
+            imge = get11.image
+            cname = 'An Eposide Founded with name %s' %get11.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+
+        if get12:
+            message = get12.server1
+            imge = get12.image
+            cname = 'An Eposide Founded with name %s' %get12.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+
+        if get13:
+            message = get13.server1
+            imge = get13.image
+            cname = 'An Eposide Founded with name %s' %get13.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+
+        if get14:
+            message = get14.server1
+            imge = get14.image
+            cname = 'An Eposide Founded with name %s' %get14.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+
+        if get15:
+            message = get15.server1
+            imge = get15.image
+            cname = 'An Eposide Founded with name %s' %get15.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+
+        if get16:
+            message = get16.server1
+            imge = get16.image
+            cname = 'An Eposide Founded with name %s' %get16.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})            
+
+        if get17:
+            message = get17.server1
+            imge = get17.image
+            cname = 'An Eposide Founded with name %s' %get17.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})            
     # if mytag  empty or if no result found return error 
              
     return jsonify({'error' : 'No Result Found!'})  
