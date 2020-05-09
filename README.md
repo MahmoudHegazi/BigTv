@@ -3,7 +3,7 @@ Rest Full API it has json end point, and it use Jquery and ajax with flask, it h
 try /JSON extension to see JSON end points
 
 AJAX Search Function (with jquery):
-<img src="mysearch2.PNG">
+<img src="mysearchs.PNG">
 <img src="mysearch.PNG">
 
 #app 
