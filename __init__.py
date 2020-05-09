@@ -85,17 +85,23 @@ def showprocess():
         # if seires != none return json with series link
         if myseries:
             message = 'https://www.google.com/'
-            return jsonify({'search' : message})
+            cname = 'A Series Founded with name %s' %myseries.name
+            imge = myseries.image
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
             
         # if mymovie != none return json with movie link    
         if mymovie:
             message = mymovie.image
-            return jsonify({'search' : message})
+            imge = mymovie.image
+            cname = 'A Movie Founded with name %s' %mymovie.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
             
         # if myeposide != none return json with eposide link
         if myeposide:
             message = myeposide.server1
-            return jsonify({'search' : message})
+            imge = myeposide.image
+            cname = 'An Eposide Founded with name %s' %myeposide.name
+            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
             
     # if mytag  empty or if no result found return error 
              
