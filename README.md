@@ -1,6 +1,6 @@
 # BigTv RestFul api 
 
-### If you wana download the full project with vagrant file without image download BigTV.zip
+### If you wana download the full project  without images download BigTV.zip
 first things first Download vagrantfile and install gitbash on windows or terminal on mac and linux
 and run vagrant up and then vagrant ssh more details read about vagrant
 
