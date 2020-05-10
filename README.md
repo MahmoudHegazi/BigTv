@@ -19,8 +19,10 @@ If some one think there is a reapted code in search function so you don't unders
 a diffrent tables not realted and with fast preformerance and with ajax this Search function Really Important
 
 
-<img src="mysearchs.PNG">
-<img src="movie.PNG">
+## AJAX Powers:
+
+<img src="ajaxpower.PNG">
+
 
 ## Python King 
 <img src="Pythonking.PNG">
