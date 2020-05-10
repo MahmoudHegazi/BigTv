@@ -89,8 +89,9 @@
 
 }
 
-input { 
-  width: 90%;
+input#txt_search { 
+  width: 84%;
+
 }
 .item {
   display: block;
@@ -304,9 +305,7 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
 
 
 
-<!-- start of search section -->
-  
-  
+
 <div class="w3-container">
 
 
@@ -321,7 +320,7 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
       
       <!-- start of search -->
       <div class="w3-container">
-        <input type="search"><button id="searchbtn"><i style="font-size:24px" class="fa">&#xf002;</i></button>
+        <input id="txt_search" type="search"><button id="searchbtn"><i style="font-size:24px" class="fa">&#xf002;</i></button>
         <div id="udContiner" class="hideme">
          <ul class="myhiden">
           <li class="item" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQTM_KQpMTSqKKpMGTxD7MlT4v1J3sRDRxFWxx9Fiu_4ArVV_Ll&usqp=CAU')">
@@ -357,7 +356,7 @@ var hider = document.getElementById("#udContiner");
 $(document).ready(function(){
   $("#searchbtn").click(function(){
   
-  let test = $('input').val();
+  let test = $('#txt_search').val();
   if (test != '') {
     $("#udContiner").toggle();
     }
@@ -371,7 +370,8 @@ $(document).ready(function(){
 
 </script>
 
-<!-- end of search -->
+
+
 
   <!-- Contact Section -->
   <div class="w3-container w3-padding-32" id="contact">
@@ -402,6 +402,16 @@ $(document).ready(function(){
 
 
 
+
+
+
+
+
+
+
+
+
+
 <!-- Footer -->
 <footer class="w3-center w3-bar w3-white w3-wide w3-padding w3-card">
   <p>Developed by <a href="https://github.com/MahmoudHegazi" title="mahmoud hegazi" target="_blank" class="w3-hover-text-green">Mahmoud Hegazi</a></p>
@@ -409,4 +419,3 @@ $(document).ready(function(){
 
 </body>
 </html>
-
