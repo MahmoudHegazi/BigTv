@@ -343,7 +343,8 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
       
       <form class="form-inline"> 
       <div class="form-group mycontianerform">
-        <input name="search" type="text" class="form-control" id="nameInput" placeholder="search" name="search">        
+        <input name="search" type="text" class="form-control" id="nameInput" placeholder="search" name="search"
+		onfocus="this.value=''">        
         <button type="submit" id="searchbtn"><i class="fas fa-search"></i></button>          </div>
       </form> 
         
@@ -377,6 +378,8 @@ var modal = document.getElementById('id01');
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+	$('#successAlert').hide();
+	
   }
 }
 </script>
