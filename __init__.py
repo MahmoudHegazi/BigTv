@@ -65,11 +65,6 @@ def showSeries(series_id, content_id):
     return render_template('video.html', series = series, boots = boots, episode=episode)
     
     
-@app.route('/mform')
-def index():
-	return render_template('form.html')   
-
-
     
     
 @app.route('/process', methods=['POST'])
