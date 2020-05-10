@@ -1,5 +1,9 @@
 # BigTv RestFul api 
 
+
+first things first Download vagrantfile and install gitbash on windows or terminal on mac and linux
+and run vagrant up and then vagrant ssh more details read about vagrant
+
 ## I Added AJAX_FLASK_Jquery search funtion to my app at 127.0.0.1/mform
 
 #### Rest Full API it has json end point, and it use Jquery and ajax with flask, it has relational database, I use SQLalchemy and CRUD
