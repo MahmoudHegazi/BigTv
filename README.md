@@ -19,7 +19,7 @@ a diffrent tables not realted and with fast preformerance and with ajax this Sea
 <img src="movie.PNG">
 
 ## Python King 
-<img src="PythonKing.PNG">
+<img src="Pythonking.PNG">
 
 # app 
 <img src="Fianl.PNG">
