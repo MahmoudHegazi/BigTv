@@ -1,5 +1,7 @@
 # BigTv RestFul api 
 
+Next step use CRUD to make The admin add or Delete or Update Series or Eposide or Movie
+
 ### If you wana download the full project  without images download BigTV.zip
 first things first Download vagrantfile and install gitbash on windows or terminal on mac and linux
 and run vagrant up and then vagrant ssh more details read about vagrant
