@@ -38,6 +38,11 @@ $(document).ready(function() {
 
 var hider = document.getElementById("#udContiner");
 
+/* 
+on ready user clicked search button and text input was empty it will hide the container 
+or at least keep it empty and if test != empty show the result retuned from jquery returned from
+ajax object returned from the flask web server it's a circle xd circle CI
+*/
 $(document).ready(function(){
   $("#searchbtn").click(function(){
   
@@ -50,6 +55,8 @@ $(document).ready(function(){
     }  
   });
 });
+
+// I moved this insde the HTML code in order to work with window, event, and model
 
 var modal = document.getElementById('id01');
 
