@@ -20,7 +20,8 @@ a diffrent tables not realted and with fast preformerance and with ajax this Sea
 
 
 ## AJAX Powers:
-
+<img src="lastr.PNG">
+<img src="Update.PNG">
 <img src="ajaxpower.PNG">
 
 
