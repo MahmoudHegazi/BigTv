@@ -324,6 +324,10 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
   </div>
 
   <div class="w3-row-padding main-container">
+  
+  
+ 
+
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 20" preserveAspectRatio="none" >
   <polygon points="100 0 100 12 100 10" fill="white"/>
@@ -334,6 +338,110 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
 </svg>
 
 <br /><br /><br />
+
+
+
+<!-- Start of model for add Series -->
+
+
+  <div id="id02" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-teal search_header"> 
+        <span id="closeAdd" onclick="document.getElementById('id02').style.display='none'" 
+        class="w3-button w3-display-topright speacial_close">&times;</span>
+        <h2>Search</h2>
+      </header>
+      
+      <!-- start of search -->
+      <div class="w3-container form_contin">
+      
+      <form class="form-inline" id="addSeriesForm"> 
+      <div class="form-group mycontianerform">
+        <input name="name" type="text" class="form-control add-series-input" 
+        id="sName" placeholder="Series Name" onfocus="this.value=''" required="requires"> 
+        
+        
+        <input name="description" type="text" class="form-control add-series-input" 
+        id="Sdescription" placeholder="Series Description" onfocus="this.value=''">
+        
+        
+        
+        
+        <input name="hero" type="text" class="form-control add-series-input" 
+        id="sHero" placeholder="Series Hero Name" onfocus="this.value=''" required="requires">
+        
+        
+        <input name="image" type="text" class="form-control add-series-input" 
+        id="sImage" placeholder="Series Image"  onfocus="this.value=''" required="requires">
+        
+        
+        <input name="url" type="text" class="form-control add-series-input" 
+        id="sUrl" placeholder="add url for first eposide link in app" onfocus="this.value=''" required="requires">
+        
+        
+        <input name="date" type="text" class="form-control add-series-input" 
+        id="sDate" placeholder="Date of Series" onfocus="this.value=''" required="requires">
+        
+        
+        <input name="menuid" type="text" class="form-control add-series-input" 
+        id="sMenuId" placeholder="Menu Id Number just 1 or 2 until now" onfocus="this.value=''"
+        min="1" max="4" required="requires">       
+        
+        
+        <button type="submit" id="addSeriesBTN"><i class="fas fa-search"></i></button> 
+        </div>
+      </form> 
+        
+        <div id="udContiner1" class="hideme">
+         <ul class="myhiden1">         
+          <li class="item" id="successAlertAdd" role="alert" style="display:none;text-align:center" >
+           <div id="resultContainer1">
+           <h3 id="sucessTextAddSeries"></h3><br>           
+           </div>
+          </li>      
+        </ul>
+      </div>
+      </div>
+      <footer class="w3-container speacial_error">
+        <div id="errorAlertAdd" class="alert alert-danger speacial_ediv color:white;" role="alert" style="display:none;"></div>
+      </footer>
+    </div>
+  </div>
+
+
+
+	
+
+
+<script>
+
+
+
+// empty the add fileds if the user closed the add Form
+let closeAddS = document.querySelector("#closeAdd");
+const addSInputs = document.querySelectorAll(".add-series-input");
+
+
+document.getElementById("closeAdd").addEventListener("click", function(){
+  for (let i=0; i < addSInputs.length; i++) {
+     if (addSInputs[i].value != '') {
+        addSInputs[i].value = '';
+     }
+  }
+});
+
+
+</script>
+
+<!-- button used to add series and start the button and close the model when click on close -->
+
+<button class="button_search" id="crudSeriesModel" style="vertical-align:middle;text-align:center;
+ margin-left:auto;margin-right:auto;float:right;" 
+onclick="document.getElementById('id02').style.display='block'"><i class="fas fa-plus"></i></button>
+
+<!-- End Of Add Series Model -->
+
+
 
 {% if series !=[] %}
 <div class="flex-container">
@@ -450,14 +558,46 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
 <script>
 var modal = document.getElementById('id01');
 
+/* this used if you need close the add if clicked outside */
+var addModel = document.getElementById('id02');
+
+
+
+// empty the add fileds if the user closed the add Form
+
+let closeAddS = document.querySelector("#closeAdd");
+const addSInputs = document.querySelectorAll(".add-series-input");
+
+
+document.getElementById("closeAdd").addEventListener("click", function(){
+  for (let i=0; i < addSInputs.length; i++) {
+     if (addSInputs[i].value != '') {
+        addSInputs[i].value = '';
+     }
+  }
+});
+
+
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
 	$('#successAlert').hide();
 	$('#errorAlert').hide();
-  }
+  }  
+  
+  /* If you need close the add if clicked out side 
+  if (event.target == addModel) {
+    addModel.style.display = "none";
+	$('#successAlertAdd').hide();
+	$('#errorAlertAdd').hide();
+  } */
+  
+  
 }
+
+
 </script>
 
 
@@ -484,6 +624,9 @@ window.onclick = function(event) {
 <!-- Image of location/map -->
 <div class="w3-container">
   <img src="https://media.holidayme.com/wp-content/uploads/2020/04/holidayme_holy-month-of-ramadan_shutterstock_618512120.jpg" class="w3-image" style="width:100%">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none" >
+  <polygon points="100 0 100 12 0 10" fill="white"/>
+</svg>
 </div>
 
 <!-- End page content -->
@@ -504,7 +647,7 @@ window.onclick = function(event) {
 
 
 <!-- Footer -->
-<footer class="w3-center w3-bar w3-white w3-wide w3-padding w3-card">
+<footer class="w3-center w3-bar w3-white w3-wide w3-padding">
   <p>Developed by <a href="https://github.com/MahmoudHegazi" title="mahmoud hegazi" target="_blank" class="w3-hover-text-green">Mahmoud Hegazi</a></p>
 </footer>
 
