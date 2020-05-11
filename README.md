@@ -6,7 +6,7 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 
 
 <img src="mfinal.PNG">
-
+<img src="ajax_add_CRUD.PNG">
 
 ### If you wana download the full project  without images download BigTV.zip
 first things first Download vagrantfile and install gitbash on windows or terminal on mac and linux
@@ -31,7 +31,7 @@ a diffrent tables not realted and with fast preformerance and with ajax this Sea
 <img src="lastr.PNG">
 <img src="Update.PNG">
 <img src="ajaxpower.PNG">
-<img src="ajax_add_CRUD">
+
 
 ## Python King 
 <img src="Pythonking.PNG">
