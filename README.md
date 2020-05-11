@@ -2,6 +2,10 @@
 
 Next step use CRUD to make The admin add or Delete or Update Series or Eposide or Movie
 
+
+<img src="mfinal.PNG">
+
+
 ### If you wana download the full project  without images download BigTV.zip
 first things first Download vagrantfile and install gitbash on windows or terminal on mac and linux
 and run vagrant up and then vagrant ssh more details read about vagrant
@@ -31,7 +35,7 @@ a diffrent tables not realted and with fast preformerance and with ajax this Sea
 <img src="Pythonking.PNG">
 
 # app 
-<img src="mfinal.PNG"
+
 <img src="Fianl.PNG">
 <img src="part1.PNG">
 
