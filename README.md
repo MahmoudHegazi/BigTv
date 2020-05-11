@@ -9,7 +9,7 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 
 ## Add Series (AJAX):
 
-<img src="ajax_add_CRUD.PNG">
+<img src="addseries.PNG">
 
 *  Add new Series without Codes only 1 click with AJAX, JS and Jquery, with form handling
 *  and all needed js or jquery codes needed to interact with the user and give him better experince
