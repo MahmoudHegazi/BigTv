@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>big TV</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<script src="/static/js/fine.js"></script>
+
+<style>
+.myseries, .mymovie {
+  background-image:url('https://static.toiimg.com/photo/54164459/Thomson-32HDL815LF33-315-inch-LED-HD-Ready-TV.jpg');
+  background-size: cover;
+  background-repeate: no-repeate;
+  
+}
+
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.main-container {
+  margin-left: 10%;
+}
+
+
+.flex-container .cover {
+
+  width: 400px;
+  height: 300px;
+  margin: 10px;
+  text-align: center;
+  font-size: 30px;
+    background-image:url('https://static.toiimg.com/photo/54164459/Thomson-32HDL815LF33-315-inch-LED-HD-Ready-TV.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+@media only screen and (max-width: 1006px) {
+.flex-container .cover {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+}
+
+@media only screen and (max-width: 405px) {
+.main-container {
+  margin-left: 0%;
+}
+
+.flex-container .cover {
+
+    background-image: none;
+}
+}
+
+.flash {
+	background-color: transparent;
+	width:100%;
+	text-decoration: none;
+
+}
+
+.flash li {
+	list-style-type: none;
+	text-align: center;
+
+}
+
+.closebtn {
+  cursor: pointer;
+}
+
+.myhiden {
+  list-style-type: none;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+input#nameInput { 
+  width: 84%;
+
+}
+.item {
+  display: block;
+
+  border: 1px solid gray;
+
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  margin-left: -38px;  
+  text-align: center;
+  opcity: .1;
+}
+
+.search-container {
+
+}
+
+#resultName {
+  color: white;
+  width: 100%;
+  height: 40px;
+  font-weight: bold;
+  margin-top: 0px;
+  background-color: #28bd70;
+  overflow: hidden;
+  display: block;
+}
+
+.hideme {
+  display: none;
+}
+#searchbtn {
+  border: none;
+  background-color: transparent;
+}
+
+.button_search {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button_search span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button_search span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button_search:hover span {
+  padding-right: 25px;
+}
+
+.button_search:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.mycontianerform {
+  width: 100%;
+  padding: 20px;
+}
+
+.search_header {
+  background-image: url('https://img.freepik.com/free-vector/abstract-galaxy-background_1199-247.jpg?size=626&ext=jpg');
+  text-align: center;
+  font-family: Arial Black;
+}
+
+.speacial_close {
+  background-color: transparent;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: impact;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class = 'flash'>
+		      
+      
+    
+
+
+<script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+</script>
+</div>
+
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">  
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+  <!--logo start here -->
+    <a href="#home" class="w3-bar-item w3-button">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRGem63cY1hzHZhxogj6MIjRz8xBztHZqKJ9SzmjgBluF0-An52&usqp=CAU" width="30px" height="100%">
+    <b>BIG</b> TV    
+    </a>
+ <!-- logo end here -->   
+ 
+ <div class="w3-right">
+ <button class="button_search" id="mybtn" style="vertical-align:middle" 
+onclick="document.getElementById('id01').style.display='block'"><span class="fa">&#xf002; </span></button>
+ 
+ </div>
+ 
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#series_section" class="w3-bar-item w3-button">TV Series</a>
+      <a href="#movies_section" class="w3-bar-item w3-button">Movies</a>
+      <a href="#contact" class="w3-bar-item w3-button">contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="https://katalogmarzen.pl/img/products/2/2019_07/widok-na-scene-teatralna-jpg-3.jpg" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>BIG</b></span> <span class="w3-hide-small w3-text-light-grey">TV</span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div id="mypage" class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 id="series_section" class="w3-border-bottom w3-border-light-grey w3-padding-16">TV Series</h3>
+  </div>
+
+  <div class="w3-row-padding main-container">
+
+
+<div class="flex-container">
+
+  
+  <!-- % for serie in seriess % -->
+  
+  <a style="text-decoration:none;" href="/bigtv/series/1/episode/1/"><div class="cover">  
+  <img class="seris_img" src="https://elwekalanews.net/wp-content/uploads/2020/04/%D9%85%D8%B3%D9%84%D8%B3%D9%84-%D8%A7%D9%84%D9%86%D9%87%D8%A7%D9%8A%D8%A9.jpg" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
+   </div></a>
+   
+   
+  <a style="text-decoration:none;" href="/bigtv/series/4/episode/1/"><div class="cover">  
+  <img class="seris_img" src="https://elwekalanews.net/wp-content/uploads/2020/04/%D9%85%D8%B3%D9%84%D8%B3%D9%84-%D8%A7%D9%84%D9%86%D9%87%D8%A7%D9%8A%D8%A9.jpg" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
+   </div></a>
+   
+   
+  <a style="text-decoration:none;" href="/bigtv/series/2/episode/1/"><div class="cover">  
+  <img class="seris_img" src="https://s3-eu-west-1.amazonaws.com/static.jbcgroup.com/amd/pictures/0e628cc7d4a56975552bd9d75efd35f0.jpg" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
+   </div></a>
+   
+   
+  <a style="text-decoration:none;" href="/bigtv/series/5/episode/1/"><div class="cover">  
+  <img class="seris_img" src="https://s3-eu-west-1.amazonaws.com/static.jbcgroup.com/amd/pictures/0e628cc7d4a56975552bd9d75efd35f0.jpg" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
+   </div></a>
+   
+   
+  <a style="text-decoration:none;" href="/bigtv/series/3/episode/1/"><div class="cover">  
+  <img class="seris_img" src="https://images.akhbarelyom.com/images/images/large/20200503092638730.jpg" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
+   </div></a>
+   
+   
+  <a style="text-decoration:none;" href="/bigtv/series/6/episode/1/"><div class="cover">  
+  <img class="seris_img" src="https://images.akhbarelyom.com/images/images/large/20200503092638730.jpg" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
+   </div></a>
+   
+   
+ 
+   
+
+    
+
+  
+  
+  </div>
+ 
+  </div>
+  
+  <!-- About Section -->
+  <!-- Project Section -->
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 id="series_section" class="w3-border-bottom w3-border-light-grey w3-pad w3-padding-16">Movies</h3>
+  </div>
+
+
+  <div class="w3-row-padding main-container">
+
+
+<div class="flex-container">
+
+  
+  <!-- % for serie in seriess % -->
+  
+  <div class="cover">  
+  <img class="seris_img" src="https://upload.wikimedia.org/wikipedia/ar/8/82/Joker_2019_ME_poster.png" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
+   </div>
+   
+   
+  <div class="cover">  
+  <img class="seris_img" src="https://upload.wikimedia.org/wikipedia/ar/8/82/Joker_2019_ME_poster.png" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
+   </div>
+   
+   
+  <div class="cover">  
+  <img class="seris_img" src="https://media.linkonlineworld.com/img/large/2015/4/1/2015_4_1_12_49_51_303.jpg" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
+   </div>
+   
+   
+  <div class="cover">  
+  <img class="seris_img" src="https://media.linkonlineworld.com/img/large/2015/4/1/2015_4_1_12_49_51_303.jpg" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
+   </div>
+   
+   
+  <div class="cover">  
+  <img class="seris_img" src="https://ww.mycima.co/wp-content/uploads/2019/04/The-Legend-Of-Tarzan-2016-.jpg" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
+   </div>
+   
+   
+  <div class="cover">  
+  <img class="seris_img" src="https://ww.mycima.co/wp-content/uploads/2019/04/The-Legend-Of-Tarzan-2016-.jpg" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
+   </div>
+   
+   
+ 
+   
+
+    
+
+  
+  
+  </div>
+ 
+  </div>
+
+
+
+
+<div class="w3-container">
+
+
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-teal search_header"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright speacial_close">&times;</span>
+        <h2>Search</h2>
+      </header>
+      
+      <!-- start of search -->
+      <div class="w3-container">
+      
+      <form class="form-inline"> 
+      <div class="form-group mycontianerform">
+        <input name="search" type="text" class="form-control" id="nameInput" placeholder="search" name="search"
+		onfocus="this.value=''">        
+        <button type="submit" id="searchbtn"><i class="fas fa-search"></i></button>          </div>
+      </form> 
+        
+        <div id="udContiner" class="hideme">
+         <ul class="myhiden">
+          <a id="mylink" href="">
+          <li class="item" id="successAlert" role="alert" style="display:none;text-align:center" >
+           <div id="resultContainer">
+           <h3 id="sucessText"></h3><br>           
+           </div>
+          </li>
+          </a>
+        </ul>
+      </div>
+      </div>
+      <footer class="w3-container w3-teal">
+        <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+      </footer>
+    </div>
+  </div>
+</div>
+
+
+	
+
+
+<script>
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+	$('#successAlert').hide();
+	$('#errorAlert').hide();
+  }
+}
+</script>
+
+
+
+
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+    <p>Tell us what TV series you need</p>
+    <form action="/action_page.php" target="_blank">
+      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" 
+      required="required" name="Email">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="TV series Name" 
+      required="required" name="Subject">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" name="Comment">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+  
+<!-- Image of location/map -->
+<div class="w3-container">
+  <img src="https://media.holidayme.com/wp-content/uploads/2020/04/holidayme_holy-month-of-ramadan_shutterstock_618512120.jpg" class="w3-image" style="width:100%">
+</div>
+
+<!-- End page content -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-bar w3-white w3-wide w3-padding w3-card">
+  <p>Developed by <a href="https://github.com/MahmoudHegazi" title="mahmoud hegazi" target="_blank" class="w3-hover-text-green">Mahmoud Hegazi</a></p>
+</footer>
+
+</body>
+</html>
