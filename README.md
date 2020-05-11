@@ -31,7 +31,7 @@ a diffrent tables not realted and with fast preformerance and with ajax this Sea
 <img src="lastr.PNG">
 <img src="Update.PNG">
 <img src="ajaxpower.PNG">
-
+<img src="ajax_add_CRUD">
 
 ## Python King 
 <img src="Pythonking.PNG">
