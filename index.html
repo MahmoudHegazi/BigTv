@@ -190,6 +190,45 @@ input#nameInput {
   padding: 20px;
 }
 
+.search_header {
+  background-image: url('https://img.freepik.com/free-vector/abstract-galaxy-background_1199-247.jpg?size=626&ext=jpg');
+  text-align: center;
+  font-family: Arial Black;
+  background-size: cover;
+  background-repeate: no-reapate;
+}
+
+.speacial_close {
+  background-color: transparent;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: impact;
+}
+
+.speacial_error {
+  background-image: url('https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-14.jpg');
+  text-align: center;
+  font-family: Arial Black;
+  color: white;
+  background-size: cover;
+  background-repeate: no-reapate;
+}
+
+.speacial_ediv {
+  background-color: transparent;
+
+}
+
+.speacial_form {
+opacity: .9;
+
+
+}
+
+.form_contin {
+  background-color: black;
+  border: none;
+}
 </style>
 
 </head>
@@ -326,20 +365,20 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
 
 
 
-<div class="w3-container">
+<div class="w3-container speacial_form">
 
 
 
   <div id="id01" class="w3-modal">
     <div class="w3-modal-content w3-card-4">
-      <header class="w3-container w3-teal"> 
+      <header class="w3-container w3-teal search_header"> 
         <span onclick="document.getElementById('id01').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
+        class="w3-button w3-display-topright speacial_close">&times;</span>
         <h2>Search</h2>
       </header>
       
       <!-- start of search -->
-      <div class="w3-container">
+      <div class="w3-container form_contin">
       
       <form class="form-inline"> 
       <div class="form-group mycontianerform">
@@ -360,8 +399,8 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
         </ul>
       </div>
       </div>
-      <footer class="w3-container w3-teal">
-        <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+      <footer class="w3-container speacial_error">
+        <div id="errorAlert" class="alert alert-danger speacial_ediv color:white;" role="alert" style="display:none;"></div>
       </footer>
     </div>
   </div>
