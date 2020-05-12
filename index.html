@@ -349,7 +349,7 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
       <header class="w3-container w3-teal search_header"> 
         <span id="closeAdd" onclick="document.getElementById('id02').style.display='none'" 
         class="w3-button w3-display-topright speacial_close">&times;</span>
-        <h2>Search</h2>
+        <h2>Add Series</h2>
       </header>
       
       <!-- start of search -->
@@ -383,7 +383,7 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
         id="sDate" placeholder="Date of Series" onfocus="this.value=''" required="requires">
         
         
-        <input name="menuid" type="text" class="form-control add-series-input" 
+        <input name="menuid" type="number" class="form-control add-series-input" 
         id="sMenuId" placeholder="Menu Id Number just 1 or 2 until now" onfocus="this.value=''"
         min="1" max="4" required="requires">       
         
@@ -525,7 +525,7 @@ onclick="document.getElementById('id02').style.display='block'"><i class="fas fa
       <!-- start of search -->
       <div class="w3-container form_contin">
       
-      <form class="form-inline"> 
+      <form class="form-inline" id="searchForm"> 
       <div class="form-group mycontianerform">
         <input name="search" type="text" class="form-control" id="nameInput" placeholder="search" name="search"
 		onfocus="this.value=''">        
