@@ -1,8 +1,10 @@
   
 
+
+
 $(document).ready(function() {
 
-	$('form').on('submit', function(event) {
+	$('#searchForm').on('submit', function(event) {
 		
 		$.ajax({
 			data : {
@@ -33,16 +35,47 @@ $(document).ready(function() {
 
 	});
 
+	$('#addSeriesForm').on('submit', function(event) {
+		
+		$.ajax({
+			data : {
+				name : $('#sName').val(),
+				description : $('#Sdescription').val(),
+				hero : $('#sHero').val(),
+				image: $('#sImage').val(),
+				url: $('#sUrl').val(),
+				date: $('#sDate').val(),
+				menuid: $('#sMenuId').val()
+				
+			},
+			type : 'POST',
+			url : '/addprocess'
+		})
+		.done(function(data) {
+
+			if (data.error) {
+				$('#errorAlertAdd').text(data.error).show();
+				$('#successAlertAdd').hide();
+				
+			}
+			else {
+				$('#successAlertAdd').show();		
+				$('#sucessTextAddSeries').text(respond.name).show();
+				$('#errorAlertAdd').hide();				
+                let addurl = "url('" + data.iurl + "')" 		
+                $("#successAlertAdd").css("background", addurl);
+			}	
+
+		});
+
+		event.preventDefault();
+
+	});
 });
 
 
 var hider = document.getElementById("#udContiner");
 
-/* 
-on ready user clicked search button and text input was empty it will hide the container 
-or at least keep it empty and if test != empty show the result retuned from jquery returned from
-ajax object returned from the flask web server it's a circle xd circle CI
-*/
 $(document).ready(function(){
   $("#searchbtn").click(function(){
   
@@ -55,8 +88,6 @@ $(document).ready(function(){
     }  
   });
 });
-
-// I moved this insde the HTML code in order to work with window, event, and model
 
 var modal = document.getElementById('id01');
 
