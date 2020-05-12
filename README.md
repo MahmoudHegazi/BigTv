@@ -3,6 +3,8 @@
 Next step use CRUD to make The admin add or Delete or Update Series or Eposide or Movie CRUD_with_AJAX like search
 
 *  I finished the first model for the Adding series and updated the index file it gonna be ajax Adding to DB
+*  I finished CRUD_AJAX_Jquery_Flask add funcion to handle adding new series to DB with AJAX
+*  Updates Added to __ini__.py __index__ and fine.js
 
 
 <img src="mfinal.PNG">
