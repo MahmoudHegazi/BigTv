@@ -15,7 +15,8 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 *  Add new Series without Codes only 1 click with AJAX, JS and Jquery, with form handling
 *  and all needed js or jquery codes needed to interact with the user and give him better experince
 *  with easy and simple way to handle this App
-
+*  Added new Feature to search model if user clicked out side the model it will close the model
+*  I closed this feature for adding series model to give a better user experience 
 
 
 ### If you wana download the full project  without images download BigTV.zip
