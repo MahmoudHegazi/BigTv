@@ -357,33 +357,33 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
       
       <form class="form-inline" id="addSeriesForm"> 
       <div class="form-group mycontianerform">
-        <input name="name" type="text" class="form-control add-series-input" 
+        <input name="name" type="text" class="form-control addinput" 
         id="sName" placeholder="Series Name" onfocus="this.value=''" required="requires"> 
         
         
-        <input name="description" type="text" class="form-control add-series-input" 
+        <input name="description" type="text" class="form-control addinput" 
         id="Sdescription" placeholder="Series Description" onfocus="this.value=''">
         
         
         
         
-        <input name="hero" type="text" class="form-control add-series-input" 
+        <input name="hero" type="text" class="form-control addinput" 
         id="sHero" placeholder="Series Hero Name" onfocus="this.value=''" required="requires">
         
         
-        <input name="image" type="text" class="form-control add-series-input" 
+        <input name="image" type="text" class="form-control addinput" 
         id="sImage" placeholder="Series Image"  onfocus="this.value=''" required="requires">
         
         
-        <input name="url" type="text" class="form-control add-series-input" 
+        <input name="url" type="text" class="form-control addinput" 
         id="sUrl" placeholder="add url for first eposide link in app" onfocus="this.value=''" required="requires">
         
         
-        <input name="date" type="text" class="form-control add-series-input" 
+        <input name="date" type="text" class="form-control addinput" 
         id="sDate" placeholder="Date of Series" onfocus="this.value=''" required="requires">
         
         
-        <input name="menuid" type="number" class="form-control add-series-input" 
+        <input name="menuid" type="number" class="form-control addinput" 
         id="sMenuId" placeholder="Menu Id Number just 1 or 2 until now" onfocus="this.value=''"
         min="1" max="4" required="requires">       
         
@@ -413,25 +413,6 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
 	
 
 
-<script>
-
-
-
-// empty the add fileds if the user closed the add Form
-let closeAddS = document.querySelector("#closeAdd");
-const addSInputs = document.querySelectorAll(".add-series-input");
-
-
-document.getElementById("closeAdd").addEventListener("click", function(){
-  for (let i=0; i < addSInputs.length; i++) {
-     if (addSInputs[i].value != '') {
-        addSInputs[i].value = '';
-     }
-  }
-});
-
-
-</script>
 
 <!-- button used to add series and start the button and close the model when click on close -->
 
@@ -556,17 +537,14 @@ onclick="document.getElementById('id02').style.display='block'"><i class="fas fa
 
 
 <script>
+
+
 var modal = document.getElementById('id01');
 
 /* this used if you need close the add if clicked outside */
 var addModel = document.getElementById('id02');
-
-
-
-// empty the add fileds if the user closed the add Form
-
 let closeAddS = document.querySelector("#closeAdd");
-const addSInputs = document.querySelectorAll(".add-series-input");
+let addSInputs = document.querySelectorAll(".addinput");
 
 
 document.getElementById("closeAdd").addEventListener("click", function(){
@@ -577,9 +555,6 @@ document.getElementById("closeAdd").addEventListener("click", function(){
   }
 });
 
-
-
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
