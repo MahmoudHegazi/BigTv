@@ -221,7 +221,36 @@ def showprocess():
              
     return jsonify({'error' : 'No Result Found!'})  
         
+
+# function for add new series
+@app.route('/addprocess', methods=['POST'])
+def addseries():    
+    
+    iname = request.form['name']
+    ides = request.form['description']
+    ihero = request.form['hero']
+    iimage = request.form['image']
+    iurl = request.form['url']
+    idate = request.form['date']
+    imenuid = request.form['menuid']
+
+    # if iname ides ihero iimage iurl idate idate imenuid use CRUD
+
+    if iname and ides and ihero and iimage and iurl and idate and idate and imenuid:
         
+        newSeries = Series(name=iname, description=ides, hero=ihero,
+                           image=iimage, url=iurl, date=idate,
+                           menu_id=imenuid)
+        session.add(newSeries)
+        
+        message = 'New Series with Name: %s Has Been Added Successfuly' % newSeries.name
+        imge = newSeries.image
+        session.commit()
+        return jsonify({'respond' : message, 'iurl' : imge})
+    
+    # if mytag  empty or if no result found return error              
+    return jsonify({'error' : 'Sorry Problem Found! Please Try after 2 Minutes'})  
+
     
     
     
@@ -229,3 +258,4 @@ if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
     app.debug = True
     app.run(host='0.0.0.0', port=5000, threaded=False)
+
