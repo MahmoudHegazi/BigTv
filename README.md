@@ -8,6 +8,7 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 
 <img src="mfinal.PNG">
 
+<img src="last1.PNG">
 ## Add Series (AJAX):
 
 <img src="addseries.PNG">
