@@ -59,9 +59,6 @@ def showSeries(series_id, content_id):
     series = session.query(Series).filter_by(id=series_id).first()
     boots =  session.query(Item).filter_by(series_id=1).all()
     episode = session.query(Item).filter_by(id=1).first()
-    print('1' + str(series))
-    print('2' + str(boots))
-    print(u'hi %s' %episode.name)
     return render_template('video.html', series = series, boots = boots, episode=episode)
     
     
@@ -251,11 +248,41 @@ def addseries():
     # if mytag  empty or if no result found return error              
     return jsonify({'error' : 'Sorry Problem Found! Please Try after 2 Minutes'})  
 
+
+
+# function for add new Movie
+@app.route('/movieprocess', methods=['POST'])
+def addmovie():    
     
+    iname = request.form['mname']
+    ides = request.form['mdescription']
+    ihero = request.form['mhero']
+    iimage = request.form['mimage']
+    iurl = request.form['murl']
+    idate = request.form['mdate']
+    imenuid = request.form['mmenuid']
+
+    # if iname ides ihero iimage iurl idate idate imenuid use CRUD
+
+    if iname and ides and ihero and iimage and iurl and idate and idate and imenuid:
+        
+        newMovie = Movie(name=iname, description=ides, hero=ihero,
+                           image=iimage, url=iurl, date=idate,
+                           menu_id=imenuid)
+        session.add(newMovie)
+        
+        message = 'New Movie with Name: %s Has Been Added' % newMovie.name
+        imge = newMovie.image
+        session.commit()
+        return jsonify({'respond' : message, 'iurl' : imge})
     
+    # if mytag  empty or if no result found return error              
+    return jsonify({'error' : 'Sorry Problem Found! Please Try after 2 Minutes'})    
+ 
+
+ 
     
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
     app.debug = True
     app.run(host='0.0.0.0', port=5000, threaded=False)
-
