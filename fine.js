@@ -1,7 +1,3 @@
-  
-
-
-
 $(document).ready(function() {
 
 	$('#searchForm').on('submit', function(event) {
@@ -56,6 +52,7 @@ $(document).ready(function() {
 			if (data.error) {
 				$('#errorAlertAdd').text(data.error).show();
 				$('#successAlertAdd').hide();
+				$('#udContiner2').hide();
 				
 			}
 			else {
@@ -71,6 +68,47 @@ $(document).ready(function() {
 		event.preventDefault();
 
 	});
+	
+	$('#movieform').on('submit', function(event) {
+		
+		$.ajax({
+			data : {
+				mname : $('#mName').val(),
+				mdescription : $('#mDescription').val(),
+				mhero : $('#mHero').val(),
+				mimage: $('#mImage').val(),
+				murl: $('#mUrl').val(),
+				mdate: $('#mDate').val(),
+				mmenuid: $('#mMenuId').val()
+				
+			},
+			type : 'POST',
+			url : '/movieprocess'
+		})
+		.done(function(data) {
+
+			if (data.error) {
+				$('#errorAlertAdd').text(data.error).show();
+				$('#successAlertMovie').hide();
+				$('#udContiner2').hide();
+				
+				
+			}
+			else {
+				$('#successAlertMovie').show();		
+				$('#sucessTextAddMovie').text(respond.name).show();
+				$('#errorAlertAddMovie').hide();				
+                let addurl = "url('" + data.iurl + "')" 		
+                $("#successAlertMovie").css("background", addurl);
+				
+			}	
+
+		});
+
+		event.preventDefault();
+
+	});	
+	
 });
 
 
@@ -97,3 +135,6 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+
