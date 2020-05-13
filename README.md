@@ -6,7 +6,7 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 *  I finished CRUD_AJAX_Jquery_Flask add funcion to handle adding new series to DB with AJAX
 *  Updates Added to __ini__.py __index__ and fine.js
 
-<img src="mfinal.PNG">
+<img src="bigtva.PNG">
 
 <img src="last1.PNG">
 ## Add Series (AJAX):
