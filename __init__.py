@@ -295,6 +295,21 @@ def deleteSeries(series_id):
     else:
         return render_template('deletes.html', series=SeriesToDelete) 
 
+# Delete a series
+@app.route('/movie/<int:movie_id>/delete/', methods=['GET', 'POST'])
+def deleteMovie(movie_id):
+    MovieToDelete = session.query(Movie).filter_by(id=movie_id).one()
+    
+    movies = session.query(Movie).order_by(asc(Movie.name))
+    series = session.query(Series).order_by(asc(Series.name))
+
+    if request.method == 'POST':
+        session.delete(MovieToDelete)
+        flash('%s Successfully Deleted' % MovieToDelete.name)
+        session.commit()
+        return redirect(url_for('showIndex', movies=movies, series=series))    
+    else:
+        return render_template('deletem.html', movie=MovieToDelete) 
  
     
 if __name__ == '__main__':
