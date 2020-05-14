@@ -57,8 +57,8 @@ def showIndex():
 @app.route('/bigtv/series/<int:series_id>/episode/<int:content_id>/')
 def showSeries(series_id, content_id):
     series = session.query(Series).filter_by(id=series_id).first()
-    boots =  session.query(Item).filter_by(series_id=1).all()
-    episode = session.query(Item).filter_by(id=1).first()
+    boots =  session.query(Item).filter_by(series_id=series_id).all()
+    episode = session.query(Item).filter_by(id=content_id).first()
     return render_template('video.html', series = series, boots = boots, episode=episode)
     
     
