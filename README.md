@@ -27,7 +27,7 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 *  I closed this feature for adding series model to give a better user experience 
 
 
-### If you wana download the full project  without images download BigTV.zip
+### If you wana download the full project  without images download bigtv_full.zip
 first things first Download vagrantfile and install gitbash on windows or terminal on mac and linux
 and run vagrant up and then vagrant ssh more details read about vagrant
 
