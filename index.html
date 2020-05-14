@@ -35,7 +35,25 @@
   
 }
 
+#home {
+ 
+ /*
+   -webkit-clip-path: polygon(0 0, 100% -20%, 100% 80%, 0 100%);
+          clip-path: polygon(0 0, 100% -20%, 100% 80%, 0 100%);
+	
+    	
+ 
+ 
 
+
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+		  
+		  
+	  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);	  
+	*/	  
+}
 
 .flex-container {
   display: flex;
@@ -149,7 +167,7 @@ input#nameInput {
 .button_search {
   display: inline-block;
   border-radius: 4px;
-  background-color: #f4511e;
+  background-color: #e50914;	
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -239,22 +257,24 @@ opacity: .9;
 }
 svg {
   display: block;
-  width: 90%;
-  height: 90px;
-  background-image: url('https://previews.123rf.com/images/rondale/rondale1510/rondale151000433/47417868-abstract-gold-background-with-copy-space-gold-glitter-background-gold-glittering-texture-.jpg');
-background-repeat: repeat-x;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60px;
+  background-image: url('https://i.pinimg.com/originals/bf/15/a0/bf15a0937933dc1a2c0a52337a61ec25.jpg');
+  background-size: cover;
   
  
 }
 
 .counter {
-background-image: url('https://cdn.slashgear.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg');
+background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-red-auspicious-cloud-texture-chinese-style-background-image_254200.jpg');
 
 
 }
 
 .counterm {
- background-image: url('https://cdn.slashgear.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg');
+ background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-red-auspicious-cloud-texture-chinese-style-background-image_254200.jpg');
 }
 
 </style>
@@ -320,9 +340,9 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="https://katalogmarzen.pl/img/products/2/2019_07/widok-na-scene-teatralna-jpg-3.jpg" alt="Architecture" width="1500" height="800">
+  <img class="w3-image" src="https://netstorage-yen.akamaized.net/images/f6f2e7d16f4705b1.jpg" alt="Architecture" width="1500" height="800">
   <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>BIG</b></span> <span class="w3-hide-small w3-text-light-grey">TV</span></h1>
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-red w3-opacity-min w3-text-black" ><b>BIG</b></span> <span class="w3-hide-small w3-text-light-grey">TV</span></h1>
   </div>
    </header>
 <br /><br /><br /><br />
@@ -363,7 +383,7 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
         <h2>Add Series</h2>
       </header>
       
-      <!-- start of search -->
+      <!-- start of Add Series -->
       <div class="w3-container form_contin">
       
       <form class="form-inline" id="addSeriesForm"> 
@@ -441,10 +461,22 @@ onclick="document.getElementById('id02').style.display='block'"><i class="fas fa
   
   <!-- % for serie in seriess % -->
   {% for one in series %}
+  <div>
   <a style="text-decoration:none;" href="{{url_for('showSeries', series_id = one.id, content_id=1) }}"><div class="cover">  
   <img class="seris_img" src="{{one.image}}" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
    </div></a>
    
+   <!-- replace this with CRUD remove button -->
+      <a href="{{url_for('deleteSeries', series_id = one.id )}}">
+	  <button class="button_search" style="vertical-align:middle;text-align:center;
+ margin-left:20px;margin-right:auto;float:left;" 
+onclick="document.getElementById('id04').style.display='block'"><i class="fas fa-remove"></i></button>
+</a>
+
+ <button class="button_search" style="vertical-align:middle;text-align:center;
+ margin-left:10px;margin-right:auto;float:left;background:green;" 
+onclick="document.getElementById('id04').style.display='block'"><i class="fas fa-edit"></i></button>
+   </div>
    {% endfor %}
  
    
@@ -478,9 +510,87 @@ onclick="document.getElementById('id02').style.display='block'"><i class="fas fa
 </svg>
 <br /><br /><br />
 
+
+
+  <div id="id03" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-teal search_header"> 
+        <span id="closeAdd1" onclick="document.getElementById('id03').style.display='none'" 
+        class="w3-button w3-display-topright speacial_close">&times;</span>
+        <h2>Add Series</h2>
+      </header>
+      
+      <!-- start of Add Movie -->
+      <div class="w3-container form_contin">
+      
+      <form class="form-inline" id="movieform"> 
+      <div class="form-group mycontianerform">
+        <input name="moviename" type="text" class="form-control addinput" 
+        id="mName" placeholder="Series Name" onfocus="this.value=''" required="requires"> 
+        
+        
+        <input name="moviedesc" type="text" class="form-control addinput" 
+        id="mDescription" placeholder="Series Description" onfocus="this.value=''">
+        
+        
+        
+        
+        <input name="moviehero" type="text" class="form-control addinput" 
+        id="mHero" placeholder="Series Hero Name" onfocus="this.value=''" required="requires">
+        
+        
+        <input name="movieimage" type="text" class="form-control addinput" 
+        id="mImage" placeholder="Series Image"  onfocus="this.value=''" required="requires">
+        
+        
+        <input name="movieurl" type="text" class="form-control addinput" 
+        id="mUrl" placeholder="add url for first eposide link in app" onfocus="this.value=''" required="requires">
+        
+        
+        <input name="moviedate" type="text" class="form-control addinput" 
+        id="mDate" placeholder="Date of Series" onfocus="this.value=''" required="requires">
+        
+        
+        <input name="moviemenuid" type="number" class="form-control addinput" 
+        id="mMenuId" placeholder="Menu Id Number just 1 or 2 until now" onfocus="this.value=''"
+        min="1" max="4" required="requires">       
+        
+        
+        <button type="submit" id="addMovieBTN"><i class="fas fa-plus"></i></button> 
+        </div>
+      </form> 
+        
+        <div id="udContiner2" class="hideme">
+         <ul class="myhiden1">         
+          <li class="item" id="successAlertMovie" role="alert" style="display:none;text-align:center" >
+           <div id="resultContainer1">
+           <h3 id="sucessTextAddMovie"></h3><br>           
+           </div>
+          </li>      
+        </ul>
+      </div>
+      </div>
+      <footer class="w3-container speacial_error">
+        <div id="errorAlertAddMovie" class="alert alert-danger speacial_ediv color:white;" role="alert" style="display:none;"></div>
+      </footer>
+    </div>
+  </div>
+
+
+
+
+<!-- button used to add series and start the button and close the model when click on close -->
+
+<button class="button_search" id="crudMovieModel" style="vertical-align:middle;text-align:center;
+ margin-left:auto;margin-right:auto;float:right;" 
+onclick="document.getElementById('id03').style.display='block'"><i class="fas fa-plus"></i></button>
+
+<!-- End Of Add Series Model -->
+
+
+
 {% if movies !=[] %}
 <div class="flex-container">
-
   
   <!-- % for serie in seriess % -->
   {% for movie in movies %}
@@ -555,10 +665,13 @@ var modal = document.getElementById('id01');
 
 /* this used if you need close the add if clicked outside */
 var addModel = document.getElementById('id02');
+/* add series close button */
 let closeAddS = document.querySelector("#closeAdd");
+/* add Movie close button */
+let closeAddS1 = document.getElementById("closeAdd1");
 let addSInputs = document.querySelectorAll(".addinput");
 
-
+/* Remove inputs values when user click on close for series model */
 document.getElementById("closeAdd").addEventListener("click", function(){
   for (let i=0; i < addSInputs.length; i++) {
      if (addSInputs[i].value != '') {
@@ -567,6 +680,17 @@ document.getElementById("closeAdd").addEventListener("click", function(){
   }
 });
 
+
+/* Remove inputs values when user click on close for series model */
+document.getElementById("closeAdd1").addEventListener("click", function(){
+  for (let i=0; i < addSInputs.length; i++) {
+     if (addSInputs[i].value != '') {
+        addSInputs[i].value = '';
+     }
+  }
+});
+
+/* close the search model if user clicked outside the screen and remove old search result */
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
