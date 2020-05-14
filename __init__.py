@@ -250,7 +250,7 @@ def addseries():
 
 
 
-# function for add new Movie
+# function for add new series
 @app.route('/movieprocess', methods=['POST'])
 def addmovie():    
     
@@ -278,7 +278,22 @@ def addmovie():
     
     # if mytag  empty or if no result found return error              
     return jsonify({'error' : 'Sorry Problem Found! Please Try after 2 Minutes'})    
- 
+
+
+# Delete a series
+@app.route('/series/<int:series_id>/delete/', methods=['GET', 'POST'])
+def deleteSeries(series_id):
+    SeriesToDelete = session.query(Series).filter_by(id=series_id).one()
+    movies = session.query(Movie).order_by(asc(Movie.name))
+    series = session.query(Series).order_by(asc(Series.name))
+
+    if request.method == 'POST':
+        session.delete(SeriesToDelete)
+        flash('%s Successfully Deleted' % SeriesToDelete.name)
+        session.commit()
+        return redirect(url_for('showIndex', movies=movies, series=series))    
+    else:
+        return render_template('deletes.html', series=SeriesToDelete) 
 
  
     
