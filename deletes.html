@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<body>
+
+<h2> Are you sure you want to delete {{series.name}}? </h2>
+
+<form action="{{url_for('deleteSeries', series_id=series.id)}}" method = 'post'>
+
+	<button type="submit" class="btn btn-default delete" id="submit" type="submit">
+	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</button>
+	<a href = '{{url_for('showIndex')}}'>
+		<button class="btn btn-default delete">
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel</button>
+	</a>
+
+</form>
+
+</body>
+</html>
