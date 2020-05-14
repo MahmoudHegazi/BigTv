@@ -594,8 +594,23 @@ onclick="document.getElementById('id03').style.display='block'"><i class="fas fa
   
   <!-- % for serie in seriess % -->
   {% for movie in movies %}
+  
+  <div>
   <div class="cover">  
   <img class="seris_img" src="{{movie.image}}" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
+   </div>
+   
+   
+    <!-- Buttons for edit or delete movies -->
+      <a href="{{url_for('deleteMovie', movie_id = movie.id )}}">
+	  <button class="button_search" style="vertical-align:middle;text-align:center;
+ margin-left:20px;margin-right:auto;float:left;" 
+onclick="document.getElementById('id04').style.display='block'"><i class="fas fa-remove"></i></button>
+</a>
+
+ <button class="button_search" style="vertical-align:middle;text-align:center;
+ margin-left:10px;margin-right:auto;float:left;background:green;" 
+onclick="document.getElementById('id04').style.display='block'"><i class="fas fa-edit"></i></button>
    </div>
    
    {% endfor %}
