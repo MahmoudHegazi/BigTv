@@ -9,6 +9,10 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 *  added Series Menu show only the existed eposides and handle error and give user interaction
 *  like if series id not found, series eposides 0, or series deleted 
 
+## last desgin
+<img src="myweb.PNG">
+
+## error handle
 <img src="handle3.PNG">
 <img src="handle.PNG">
 <img src="handle1.PNG">
@@ -19,8 +23,7 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 3.  edit the video.html and make it like laroza.com
 4.  try the api on AWS
 
-## last desgin
-<img src="myweb.PNG">
+
 
 ## add new series (render text image with ajax from flask webserver)
 <img src="https://github.com/MahmoudHegazi/hello-world/blob/master/myadd2.PNG?raw=true">
