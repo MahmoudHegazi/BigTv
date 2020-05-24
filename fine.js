@@ -57,7 +57,7 @@ $(document).ready(function() {
 			}
 			else {
 				$('#successAlertAdd').show();
-				$('#udContiner1').show()				
+				$('#udContiner2').show()				
 				$('#sucessTextAddSeries').text(data.respond).show();	//data.respond
 				
 				document.querySelector('.hideme').display = "block";
@@ -81,6 +81,7 @@ $(document).ready(function() {
 		event.preventDefault();
 
 	});
+	
 	
 	$('#movieform').on('submit', function(event) {
 		
