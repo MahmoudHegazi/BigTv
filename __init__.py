@@ -277,7 +277,41 @@ def addmovie():
         return jsonify({'respond' : message, 'iurl' : imge})
     
     # if mytag  empty or if no result found return error              
-    return jsonify({'error' : 'Sorry Problem Found! Please Try after 2 Minutes'})    
+    return jsonify({'error' : 'Sorry Problem Found! Please Try after 2 Minutes'})  
+
+# function for edit series
+@app.route('/series/<int:series_id>/edit/', methods=['GET', 'POST'])
+def editSeries(series_id):
+    SeriesToEdit = session.query(Series).filter_by(id=series_id).one()
+    movies = session.query(Movie).order_by(asc(Movie.name))
+    series = session.query(Series).order_by(asc(Series.name))
+    
+    if request.method == 'POST':
+        if request.form['ename']:
+            SeriesToEdit.name = request.form['ename']
+        
+        if request.form['edescription']:
+            SeriesToEdit.description = request.form['edescription']
+            
+        if request.form['ehero']:
+            SeriesToEdit.hero = request.form['ehero']
+        if request.form['eimage']:
+            SeriesToEdit.image = request.form['eimage']
+        if request.form['eurl']:
+            SeriesToEdit.url = request.form['eurl']
+        if request.form['eurl']:
+            SeriesToEdit.date = request.form['eurl']
+        session.add(SeriesToEdit)
+        flash('%s Successfully edited' % SeriesToEdit.name)
+        session.commit()        
+        return redirect(url_for('showIndex', movies=movies, series=series))    
+    else:
+        return render_template('edit.html', series=SeriesToEdit)
+
+
+       
+
+
 
 
 # Delete a series
