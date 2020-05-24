@@ -9,7 +9,9 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 *  added Series Menu show only the existed eposides and handle error and give user interaction
 *  like if series id not found, series eposides 0, or series deleted 
 
-<img src="handle1.png">
+<img src="handle3.PNG">
+<img src="handle.PNG">
+<img src="handle1.PNG">
 
 ## what needed:
 1.  CRUD edite movie
