@@ -67,9 +67,8 @@ def showSMenu(series_id):
     total_index = series_index + eposide_index
     
     myid = series_id 
-    #if no series founded but eposides found or no series
     if series == None and total_index < 1:
-        message = "The Series with id: %s maybe deleted or not existed" % myid
+        message = "The Series with id: %s maybe deleted or not existed but there are eposides" % myid
         flash(message)
     else:
         series_index += 1    
@@ -78,19 +77,16 @@ def showSMenu(series_id):
         eposide_index += 1
         
     else:
-        
         if total_index < 1:
-            #if no epsoides founded
-            message = "no eposides found, We are going to add the eposides soon"
+        
+            message = "We are going to add the eposides soon"          
             flash(message)
             
     
     if total_index > 1:
-     
         message = "There is no Series with id: %s" % myid    
         flash(message)
         
-    # note if no series and no eposides it will be handled using jinja2 and flash check new.html
     return render_template('new.html', series = series, eposides = eposides)    
     
     
@@ -277,7 +273,35 @@ def addseries():
         return jsonify({'respond' : message, 'iurl' : imge})
     
     # if mytag  empty or if no result found return error              
-    return jsonify({'error' : 'Sorry Problem Found! Please Try after 2 Minutes'})  
+    return jsonify({'error' : 'Sorry Problem Found! Please Try after 2 Minutes'})
+
+
+
+# function for add new eposide
+@app.route('/addeposide', methods=['POST'])
+def addEposide():    
+    
+    iname = request.form['getname']
+    myserver1 = request.form['getserver']
+    myserver2 = request.form['server2']
+    getid = request.form['seid']
+    print('added')        
+
+    # if iname ides ihero iimage iurl idate idate imenuid use CRUD
+
+
+    
+    if iname and myserver1:
+        newItem = Item(name=iname, server1=myserver1, server2=myserver2, series_id=getid)        
+        session.add(newItem)
+        
+        message = 'Series with Name: %s Added Successfuly' % newItem.name
+        imge = "tyest"  
+        session.commit()
+        return jsonify({'respond' : message, 'iurl' : imge})
+    print("aded")        
+    # if mytag  empty or if no result found return error              
+    return jsonify({'error' : 'Sorry Problem Found! Please Try after 2 Minutes'})    
 
 
 
