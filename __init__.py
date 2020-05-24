@@ -46,6 +46,7 @@ def bigtvJSON():
 
 
 # Show all restaurants
+# Show all restaurants
 @app.route('/')
 @app.route('/bigtv/', methods=['GET', 'POST'])
 def showIndex():
@@ -54,13 +55,39 @@ def showIndex():
     return render_template('index.html', movies=movies, series = series)
 
 
-@app.route('/bigtv/series/<int:series_id>/episode/<int:content_id>/')
-def showSeries(series_id, content_id):
-    series = session.query(Series).filter_by(id=series_id).first()
-    boots =  session.query(Item).filter_by(series_id=series_id).all()
-    episode = session.query(Item).filter_by(id=content_id).first()
-    return render_template('video.html', series = series, boots = boots, episode=episode)
+
+@app.route('/bigtv/series/<int:series_id>/episodes/')
+def showSMenu(series_id):
+    series = session.query(Series).filter_by(id=series_id).first()    
+    eposides =  session.query(Item).filter_by(series_id=series_id).all()
+    #index for series notfound
+    series_index = 0
+    #index for eposides notfound
+    eposide_index = 0
+    total_index = series_index + eposide_index
     
+    myid = series_id 
+    if series == None and total_index < 1:
+        message = "The Series with id: %s maybe deleted or not existed" % myid
+        flash(message)
+    else:
+        series_index += 1    
+    
+    if eposides:
+        eposide_index += 1
+        
+    else:
+        if total_index < 1:
+        
+            message = "The Series with id: %s Have no eposides" % myid            
+            flash(message)
+            
+    
+    if total_index > 1:
+        message = "There is no Series with id: %s" % myid    
+        flash(message)
+        
+    return render_template('new.html', series = series, eposides = eposides)    
     
     
     
@@ -350,3 +377,4 @@ if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
     app.debug = True
     app.run(host='0.0.0.0', port=5000, threaded=False)
+
