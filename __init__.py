@@ -67,6 +67,7 @@ def showSMenu(series_id):
     total_index = series_index + eposide_index
     
     myid = series_id 
+    #if no series founded but eposides found or no series
     if series == None and total_index < 1:
         message = "The Series with id: %s maybe deleted or not existed" % myid
         flash(message)
@@ -77,16 +78,19 @@ def showSMenu(series_id):
         eposide_index += 1
         
     else:
-        if total_index < 1:
         
-            message = "The Series with id: %s Have no eposides" % myid            
+        if total_index < 1:
+            #if no epsoides founded
+            message = "no eposides found, We are going to add the eposides soon"
             flash(message)
             
     
     if total_index > 1:
+     
         message = "There is no Series with id: %s" % myid    
         flash(message)
         
+    # note if no series and no eposides it will be handled using jinja2 and flash check new.html
     return render_template('new.html', series = series, eposides = eposides)    
     
     
