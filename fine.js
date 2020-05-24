@@ -81,6 +81,39 @@ $(document).ready(function() {
 		event.preventDefault();
 
 	});
+    
+    $('#addEPosideForm').on('submit', function(event) {
+		
+		$.ajax({
+			data : {
+				seid : $('#itid').val(),
+				getname : $('#epName').val(),
+				getserver : $('#epserver').val(),
+				server2 : $('#epserver2').val()
+			},
+			type : 'POST',
+			url : '/addeposide'
+		})
+		.done(function(data) {
+
+			if (data.error) {
+				$('#errorAlertAdd').text(data.error).show();
+				$('#successAlertAdd').hide();
+				$('#udContiner2').hide();
+				
+			}
+			else {
+				$('#successAlertAdd').show();
+				$('#udContiner2').show()				
+				$('#sucessTextAddSeries').text(data.respond).show();	//data.respond		
+
+			}	
+
+		});
+
+		event.preventDefault();
+
+	});
 	
 	
 	$('#movieform').on('submit', function(event) {
