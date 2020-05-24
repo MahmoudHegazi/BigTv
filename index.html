@@ -277,6 +277,20 @@ background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/2019062
  background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-red-auspicious-cloud-texture-chinese-style-background-image_254200.jpg');
 }
 
+
+/* edit style for add searies result title and image*/
+#sucessTextAddSeries {
+  background-color:black;
+  color:white;
+  border:2px solid gold;
+  padding: 10px;
+  width:400px;
+  margin-left:auto;
+  margin-right:auto;
+  height:auto;"
+}
+
+
 </style>
 
 </head>
@@ -296,6 +310,7 @@ background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/2019062
         </ul>
         {% endif %}
     {% endwith %}
+
 
 
 <script>
@@ -425,9 +440,10 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
         
         <div id="udContiner1" class="hideme">
          <ul class="myhiden1">         
-          <li class="item" id="successAlertAdd" role="alert" style="display:none;text-align:center" >
+          <li class="item" id="successAlertAdd" role="alert" style="text-align:center" >
            <div id="resultContainer1">
-           <h3 id="sucessTextAddSeries"></h3><br>           
+           <h3 id="sucessTextAddSeries"></h3><br><br><br><br><br><br><br>
+           <span id="successAlertfooter" style="margin-left:auto;margin-right:auto;"></span>		   
            </div>
           </li>      
         </ul>
@@ -462,8 +478,9 @@ onclick="document.getElementById('id02').style.display='block'"><i class="fas fa
   <!-- % for serie in seriess % -->
   {% for one in series %}
   <div>
+  <!-- the problem in 1 it return The epsoide with id 1 edit that -->
   <a style="text-decoration:none;" href="{{url_for('showSeries', series_id = one.id, content_id=1) }}"><div class="cover">  
-  <img class="seris_img" src="{{one.image}}" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
+  <img class="seris_img" src="{{one.image}}" alt="series photo" width="96%" height="70%" style="margin-top:30px;margin-left:3px">
    </div></a>
    
    <!-- replace this with CRUD remove button -->
@@ -564,7 +581,8 @@ onclick="document.getElementById('id04').style.display='block'"><i class="fas fa
          <ul class="myhiden1">         
           <li class="item" id="successAlertMovie" role="alert" style="display:none;text-align:center" >
            <div id="resultContainer1">
-           <h3 id="sucessTextAddMovie"></h3><br>           
+           <h3 id="sucessTextAddMovie"></h3><br><br>
+                      
            </div>
           </li>      
         </ul>
