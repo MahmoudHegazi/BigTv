@@ -9,6 +9,11 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 
 ## last desgin
 <img src="myweb.PNG">
+
+## add new series (render text image with ajax from flask webserver)
+<img src="https://github.com/MahmoudHegazi/hello-world/blob/master/myadd2.PNG?raw=true">
+
+
 <img src="myweb2.PNG">
 
 
