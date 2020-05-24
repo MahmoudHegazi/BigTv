@@ -438,10 +438,10 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
         </div>
       </form> 
         
-        <div id="udContiner1" class="hideme">
+        <div id="udContiner2" class="hideme">
          <ul class="myhiden1">         
           <li class="item" id="successAlertAdd" role="alert" style="text-align:center" >
-           <div id="resultContainer1">
+           <div id="resultContainer2">
            <h3 id="sucessTextAddSeries"></h3><br><br><br><br><br><br><br>
            <span id="successAlertfooter" style="margin-left:auto;margin-right:auto;"></span>		   
            </div>
@@ -454,11 +454,8 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
       </footer>
     </div>
   </div>
-
-
-
-	
-
+  
+ 
 
 
 <!-- button used to add series and start the button and close the model when click on close -->
@@ -486,14 +483,15 @@ onclick="document.getElementById('id02').style.display='block'"><i class="fas fa
    <!-- replace this with CRUD remove button -->
       <a href="{{url_for('deleteSeries', series_id = one.id )}}">
 	  <button class="button_search" style="vertical-align:middle;text-align:center;
- margin-left:20px;margin-right:auto;float:left;" 
-onclick="document.getElementById('id04').style.display='block'"><i class="fas fa-remove"></i></button>
+ margin-left:20px;margin-right:auto;float:left;"><i class="fas fa-remove"></i></button>
 </a>
 
+<a href="{{url_for('editSeries', series_id = one.id )}}">
  <button class="button_search" style="vertical-align:middle;text-align:center;
- margin-left:10px;margin-right:auto;float:left;background:green;" 
-onclick="document.getElementById('id04').style.display='block'"><i class="fas fa-edit"></i></button>
+ margin-left:10px;margin-right:auto;float:left;background:green;"><i class="fas fa-edit"></i></button>
    </div>
+</a>   
+
    {% endfor %}
  
    
