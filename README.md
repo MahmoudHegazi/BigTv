@@ -6,6 +6,7 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 *  finished CRUD_AJAX_Jquery_Flask add funcion to handle adding new series to DB with AJAX
 *  finished CRUD delete func for series and movies and changed the style (I didn't use AJAX in delete to avoid problems)
 *  Finished CRUD edit func for series, create new edit page and form
+*  Finished CRUD_AJAX_Jquery_FLASK_AJAX add function to handle adding new eposides to speacifc searies.
 *  added Series Menu show only the existed eposides and handle error and give user interaction
 *  like if series id not found, series eposides 0, or series deleted 
 
