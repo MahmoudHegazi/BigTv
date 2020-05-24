@@ -240,7 +240,7 @@ def addseries():
                            menu_id=imenuid)
         session.add(newSeries)
         
-        message = 'New Series with Name: %s Has Been Added Successfuly' % newSeries.name
+        message = 'Series with Name: %s Added Successfuly' % newSeries.name
         imge = newSeries.image
         session.commit()
         return jsonify({'respond' : message, 'iurl' : imge})
