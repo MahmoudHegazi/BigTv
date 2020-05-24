@@ -476,7 +476,7 @@ onclick="document.getElementById('id02').style.display='block'"><i class="fas fa
   {% for one in series %}
   <div>
   <!-- the problem in 1 it return The epsoide with id 1 edit that -->
-  <a style="text-decoration:none;" href="{{url_for('showSeries', series_id = one.id, content_id=1) }}"><div class="cover">  
+  <a style="text-decoration:none;" href="{{url_for('showSMenu', series_id = one.id) }}"><div class="cover">  
   <img class="seris_img" src="{{one.image}}" alt="series photo" width="96%" height="70%" style="margin-top:30px;margin-left:3px">
    </div></a>
    
