@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  
+  
+  <style>
+  .myheader {
+    background-image:url('https://c1.wallpaperflare.com/preview/302/309/318/milky-way-starry-sky-night-sky-star.jpg');
+    background-repeate: repeate;
+
+  }
+  .flash {
+	background-color: transparent;
+	width:100%;
+	text-decoration: none;
+
+}
+
+.flash li {
+	list-style-type: none;
+	text-align: center;
+
+}
+
+.closebtn {
+  cursor: pointer;
+}
+#notfound_button {
+  width:200px;
+  padding:10px;
+  font-family: lemon;
+  border:2px solid green;
+  background-color: black;
+  color: white;
+  border-radius:5%;
+}
+
+#notfound_button:hover {
+   opacity: .8;
+}
+
+#notfound_a {
+  text-decoaration: none;
+}
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center myheader">
+      {% if series %}
+  <h4 style="color:white;background-color:darkred;width:210px;padding:5px;margin-left:auto;margin-right:auto;font-size:1em;">{{series.name}}</h4>
+      {% endif %}
+  <p style="color:white;">!Watch Online</p> 
+</div>
+
+<!-- flash start -->
+
+<div class = 'flash'>
+		      {% with messages = get_flashed_messages() %}
+      {% if messages[1] %}
+          
+        <ul>
+
+            <li class="alert alert-error">			 
+            <h4><strong>Not Found Error 404: No Series With the id provided in the URL </strong></h4>
+			<br /><br />
+			<a id="notfound_a" href="\"><button id="notfound_button" class="alert-warning">Back Home</button></a>
+           
+            </li>
+
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+<div class = 'flash'>
+		      {% with messages = get_flashed_messages() %}
+      {% if not messages[1] %}
+          
+        <ul>
+        {% for message in messages %}
+            <li class="alert alert-info">
+            <strong> {{ message }} </strong>
+            <br /><br />
+			<a id="notfound_a" href="\"><button id="notfound_button" class="alert-warning">Back Home</button></a>           			
+            </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+
+<script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+</script>
+
+</div>
+
+<!-- flash end -->
+
+{% if eposides %}
+<div class="container">
+  <div class="row">
+  {% for eposide in eposides %}
+  <!-- a series eposide {{eposide.id}}-->
+    <div class="col-sm-3" style="text-align:center;">
+      <h3 style="margin-top:10px;text-align:center;">{{eposide.name}}</h3>
+      <img src="{{eposide.image}}" style="width:200px;height:150px;">	  
+    </div> 
+  {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+</body>
+</html>
