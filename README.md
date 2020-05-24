@@ -2,10 +2,16 @@
 
 Next step use CRUD to make The admin add or Delete or Update Series or Eposide or Movie CRUD_with_AJAX like search
 
-*  I finished the first model for the Adding series and updated the index file it gonna be ajax Adding to DB
-*  I finished CRUD_AJAX_Jquery_Flask add funcion to handle adding new series to DB with AJAX
-*  I finished CRUD delete func for series and movies and changed the style (I didn't use AJAX in delete to avoid problems)
+*  finished the first model for the Adding series and updated the index file it gonna be ajax Adding to DB
+*  finished CRUD_AJAX_Jquery_Flask add funcion to handle adding new series to DB with AJAX
+*  finished CRUD delete func for series and movies and changed the style (I didn't use AJAX in delete to avoid problems)
+*  Finished CRUD edit func for series, create new edit page and form
 
+## what needed:
+1.  CRUD edite movie
+2.  edit the form
+3.  edit the video.html and make it like laroza.com
+4.  try the api on AWS
 
 ## last desgin
 <img src="myweb.PNG">
