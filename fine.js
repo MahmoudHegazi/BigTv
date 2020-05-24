@@ -56,11 +56,24 @@ $(document).ready(function() {
 				
 			}
 			else {
-				$('#successAlertAdd').show();		
-				$('#sucessTextAddSeries').text(respond.name).show();
-				$('#errorAlertAdd').hide();				
+				$('#successAlertAdd').show();
+				$('#udContiner1').show()				
+				$('#sucessTextAddSeries').text(data.respond).show();	//data.respond
+				
+				document.querySelector('.hideme').display = "block";
+				$('#errorAlertAdd').hide();                				
                 let addurl = "url('" + data.iurl + "')" 		
                 $("#successAlertAdd").css("background", addurl);
+				$("#successAlertAdd").css("background-size", "cover");
+				$("#successAlertAdd").css("background-repeat", "no-repeat;");
+				$("#successAlertAdd").css("height", "400px");				
+				$('#successAlertfooter').text("After Finish all your adding \n refreash the page").show();
+				$("#successAlertfooter").css("color", "white");
+				$("#successAlertfooter").css("width", "300px");
+				$("#successAlertfooter").css("height", "auto");
+				$("#successAlertfooter").css("padding", "10px");
+				$("#successAlertfooter").css("background-color", "gold");
+				$("#successAlertfooter").css("font-weight", "bold");
 			}	
 
 		});
