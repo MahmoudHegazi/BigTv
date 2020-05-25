@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+<title>Series page</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -18,15 +20,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(90deg, rgba(3,3,5,1) 0%, rgba(48,48,48,0.9906337535014006) 50%, rgba(0,0,0,1) 100%) !important;
     background-image: linear-gradient(90deg, rgb(3, 3, 5) 0%, rgba(48, 48, 48, 0.992) 50%, rgb(0, 0, 0) 100%) !important;
-    background-position-x: initial !important;
-    background-position-y: initial !important;
-    background-size: initial !important;
-    background-repeat-x: initial !important;
-    background-repeat-y: initial !important;
-    background-attachment: initial !important;
-    background-origin: initial !important;
-    background-clip: initial !important;
-    background-color: initial !important;
+
 }
 .container {
   position: relative;
@@ -114,7 +108,7 @@ body {
 
   background-color: rgb(220 30 30);
   border: 1px solid darkred;
-  border: radius: 50%;
+  border-radius: 5%;
   width: 160px;
   overflow: hidden;
 
@@ -123,9 +117,15 @@ body {
   font-size: 1em;
   font-family: georgia;
   color: white;
+  cursor: pointer;
 
 
 } 
+
+.submitmessae:hover {
+  background-color: black;
+  color: white;
+}
 
 
 
@@ -138,6 +138,18 @@ body {
 
 }
 */
+
+@media screen and (min-width: 1300px) {
+  body {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid white;
+    
+  }
+}
+
+
 .videotext-cont {
   text-align: center;
 }
@@ -209,16 +221,16 @@ display:none;
   height: 170px;
   border-right: 8px solid red;
   
+  
 }
 
 .myfooter {
-  width: 100%;
+  width: 98%;
   color: white;
   text-align: center;
   padding: 10px;
-  background-color: black;
-  margin-top: 30px;
-  font-size: 1em;
+  background-color: black; 
+  font-size: 1em;  
 }
 .comment_title {
   font-family: lemon;
@@ -227,10 +239,14 @@ display:none;
   margin-right: 15px;
 }
 #fullapp {
-  border: 1px solid white;
+  border: 2px solid black;
+  border-top: 2px solid #b30000;
+  
+  background-color:#b30000;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  
 }
 
 /* header */
@@ -265,6 +281,7 @@ display:none;
 
 .header a.active {
   background-color: #b30000;
+  text-shadow: 2px 2px 4px #000000;
   color: white;
   font-family: lemon;
   text-align: center;
@@ -351,6 +368,20 @@ display:none;
 }
 
 /* end */
+.mytitle_video {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#mylogo_name {
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 1em;
+}
+
+#myemail {
+  color: white;
+  text-decoration: none;
+  font-family: goergia;
+}
 </style>
 </head>
 <body>
@@ -361,7 +392,7 @@ display:none;
 
 
 <div class="header">
-  <a href="#default" class="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRGem63cY1hzHZhxogj6MIjRz8xBztHZqKJ9SzmjgBluF0-An52&usqp=CAU" width="40px" height="100%"> <sup>BigTV</sup></a>
+  <a href="#default" class="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRGem63cY1hzHZhxogj6MIjRz8xBztHZqKJ9SzmjgBluF0-An52&usqp=CAU" width="40" height="100%" alt="company logo tv with some colored squares"> <sup id="mylogo_name">BigTV</sup></a>
   <div class="header-right">
     <a class="active" href="#home">Sign up</a>
   </div>
@@ -397,22 +428,22 @@ function myFunction() {
 
 
 <div class="videotext-cont">
-<h3 id="title" dir="rtl" style="color:white;">The Joker</h3>
+<h3 id="title" dir="rtl" class="mytitle_video" style="color:white;">The Joker</h3>
 <div class="container">
-  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="watch joker" name="series_video" allowfullscreen></iframe>
 </div>
 </div>
 
 <!-- this more info section -->
 
-<div clas="moreinfo">
+<div >
 
 <span id="closebtn_info" class="mobile_closer">X</span>
 
 <div id="myghrapich">
 
 
-<span id="plus_sign" style="color:white;">More Info</span>
+<span id="plus_sign" style="color:white;">See More</span>
 
 <div id="mytext" dir="ltr" ><p id="video_descrption"><span style="background:black;">Very good movie talks about mr joker 
 and how he become a bad guy he now want batman dead, 
@@ -447,6 +478,9 @@ top action. also we are going to add tags here</span></p>
   </tr>
   <tr>
   <td>{{ tag17 }}</td>
+  <td>additional fixed tag</td>
+  <td>another one</td>
+  <td>final</td>
   </tr>
 
 
@@ -507,7 +541,7 @@ document.getElementById("myghrapich").addEventListener("mouseenter", scrollWin);
 </div>
 <form>
 <input class="username" type="text"  placeholder="   Your Name" title="please enter your name"
-min="3" max="40">
+ minlength="3" maxlength="50">
 <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-3/177800/130-512.png"
 width="50" height="50" title="blue user profile icon" class="profile_image">
 
@@ -521,11 +555,15 @@ width="50" height="50" title="blue user profile icon" class="profile_image">
 <br /><br />
 </div>
 
+<!-- this to add extra fixed space bettwen footer and form -->
 
+<div><br><br><br><br></div>
 <footer class="myfooter">
-<p><em>Mahmoud Hegazi</em></p>
+<a id="myemail" href="mailto:mahmod.hagzy@gmail.com?&bcc=fire_archer2@yahoo.com&subject=I%20Have%20Task%20for%20You&body=You%20are%20invited%20to%20do%20this%20task!" title="click to send mail dirct to website admin"
+target="_top">
+<p><em>Creator: Mahmoud Hegazi</em></p>
+</a>
 </footer>
 
 </body>
 </html>
-
