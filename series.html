@@ -56,20 +56,23 @@ body {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 10px 16px;
+  padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
 
 .topnav a:hover {
   background-color: #ddd;
-  color: black;
+  color: red;
 }
 
 .topnav a.active {
   color: white;
 }
 
+.topnav a.active:hover {
+  color: black;
+}
 .topnav .icon {
   display: none;
 }
@@ -213,6 +216,69 @@ display:none;
   text-align: right;
   margin-right: 15px;
 }
+#fullapp {
+  border: 1px solid white;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* header */
+
+.header {
+  overflow: hidden;
+  background-color: white;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: darkred;
+  color: white;
+  font-family: lemon;
+  text-align: center;
+}
+
+.header a.active:hover {
+  background-color: black;
+}
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+
+/* end of header */
 </style>
 </head>
 <body>
@@ -222,8 +288,13 @@ display:none;
 
 
 
-
-
+<div class="header">
+  <a href="#default" class="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRGem63cY1hzHZhxogj6MIjRz8xBztHZqKJ9SzmjgBluF0-An52&usqp=CAU" width="40px" height="100%"> <sup>BigTV</sup></a>
+  <div class="header-right">
+    <a class="active" href="#home">Sign up</a>
+  </div>
+</div>
+<br /><br />
 
 <div class="main-container">
 
@@ -249,9 +320,12 @@ function myFunction() {
 }
 </script>
 <!-- end of nav -->
+<br />
+<div id="fullapp">
+
 
 <div class="videotext-cont">
-<h3 id="title" dir="rtl" style="color:white;">مشاهدة مسلسل النهاية</h3>
+<h3 id="title" dir="rtl" style="color:white;">The Joker</h3>
 <div class="container">
   <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
 </div>
@@ -266,9 +340,9 @@ function myFunction() {
 
 <span id="plus_sign" style="color:white;">More Info</span>
 
-<p id="mytext" dir="rtl" >مشاهدة مسلسل يوسف الشريف النهاية يحكي عن عام 2120  <br /> 
-وماذا يحدث عندما تحكم الالات وتحتل الكوكب, قصة خيالية <br />
-من مسلسلات 2020 رمضان</p>
+<p id="mytext" dir="ltr" >Very good movie talks about mr joker  <br /> 
+and how he become a bad guy he now want<br /> batman dead, 
+top action. also we are going to add tags here</p>
 
 
 </div>
@@ -283,15 +357,27 @@ function hidSign() {
    infoSign.style.display = "none";
    infoText.style.display = "block"; 
    closerBtn.style.display = "block";
+
 }
 
 function showSign() {
    infoSign.style.display = "block";
    infoText.style.display = "none";
    closerBtn.style.display = "none";
+
 }
+
+
+function scrollWin() {
+  window.scrollBy(0, 250);
+}
+
+
 document.getElementById("myghrapich").addEventListener("mouseover", hidSign);
 document.getElementById("myghrapich").addEventListener("mouseout", showSign);
+
+document.getElementById("myghrapich").addEventListener("mouseenter", scrollWin);
+
 
 
 </script>
@@ -300,7 +386,7 @@ document.getElementById("myghrapich").addEventListener("mouseout", showSign);
 </div>
 
 
-
+</div>
 
 <!-- message section -->
 <div id="comment_container" class="messages_cont">
@@ -322,6 +408,7 @@ width="50" height="50" title="blue user profile icon" class="profile_image">
 </form>
 <br /><br />
 </div>
+
 
 <footer class="myfooter">
 <p><em>Mahmoud Hegazi</em></p>
