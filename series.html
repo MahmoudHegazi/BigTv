@@ -13,6 +13,7 @@ html {
 }
 
 body {
+    
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(90deg, rgba(3,3,5,1) 0%, rgba(48,48,48,0.9906337535014006) 50%, rgba(0,0,0,1) 100%) !important;
@@ -160,9 +161,12 @@ body {
 
 #myghrapich:hover {
   width: 90%;
-  height: 300px;
+  height: 400px;
   color: white;
   background-color: rgb(25, 25, 25);
+  overflow: scroll;
+
+  
 }
 
 #mytext:hover {
@@ -197,13 +201,14 @@ display:none;
 }
 
 .messages_cont {
-  margin-top: 320px;
+  margin-top: 420px;
   color: white;
   margin-left: 5px;
   width: 95%;
   text-align: right;
   height: 170px;
   border-right: 8px solid red;
+  
 }
 
 .myfooter {
@@ -254,11 +259,12 @@ display:none;
 
 .header a:hover {
   background-color: #ddd;
+  
   color: black;
 }
 
 .header a.active {
-  background-color: darkred;
+  background-color: #b30000;
   color: white;
   font-family: lemon;
   text-align: center;
@@ -284,6 +290,67 @@ display:none;
 }
 
 /* end of header */
+
+/* style of tags tab */
+#series_tags {
+  margin-left: auto;
+  margin-right: auto;
+
+  
+}
+
+#series_tags td {
+ border: 1px solid gray;
+ color: black;
+ width: 130px;
+ background-color: white;
+ display: inline-block;
+ font-size: .77em;
+ height: 40px;
+ overflow: hidden;
+}
+
+#series_tags td:hover {
+  background-color: black;
+  color: white;
+}
+/* */
+
+#video_descrption {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:black;
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Hyades.jpg/1200px-Hyades.jpg");
+  border: 2px solid gold;
+  border-radius: 3%;
+  color: white;
+}
+
+/* custom scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+/* end */
 </style>
 </head>
 <body>
@@ -347,9 +414,47 @@ function myFunction() {
 
 <span id="plus_sign" style="color:white;">More Info</span>
 
-<p id="mytext" dir="ltr" >Very good movie talks about mr joker  <br /> 
-and how he become a bad guy he now want<br /> batman dead, 
-top action. also we are going to add tags here</p>
+<div id="mytext" dir="ltr" ><p id="video_descrption"><span style="background:black;">Very good movie talks about mr joker 
+and how he become a bad guy he now want batman dead, 
+top action. also we are going to add tags here</span></p>
+
+<div class="table_container">
+<table id="series_tags">
+
+  <tr>
+    <td>watch joker episode 1</td>
+    <td>{{ tag2 }}</td>
+    <td>{{ tag3 }}</td>
+    <td>{{ tag4 }}</td>
+  </tr>
+  <tr>    
+    <td>{{ tag5 }}</td>
+    <td>{{ tag6 }}</td>
+    <td>{{ tag7 }}</td>
+    <td>{{ tag8 }}</td>
+  </tr>
+  <tr>
+    <td>{{ tag9 }}</td>
+    <td>{{ tag1 }}</td>
+    <td>{{ tag11 }}</td>
+    <td>{{ tag12 }}</td>
+  </tr>
+  <tr>
+    <td>{{ tag13 }}</td>
+    <td>{{ tag14 }}</td>
+    <td>{{ tag15 }}</td>
+    <td>{{ tag16 }}</td>    
+  </tr>
+  <tr>
+  <td>{{ tag17 }}</td>
+  </tr>
+
+
+</table>
+<br />
+</div>
+
+</div>
 
 
 </div>
@@ -423,3 +528,4 @@ width="50" height="50" title="blue user profile icon" class="profile_image">
 
 </body>
 </html>
+
