@@ -9,10 +9,14 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 *  Finished CRUD_AJAX_Jquery_FLASK_AJAX add function to handle adding new eposides to speacifc searies.
 *  added Series Menu show only the existed eposides and handle error and give user interaction
 *  like if series id not found, series eposides 0, or series deleted 
+*  added series template like larazoa series.html
+
 
 ## last desgin
 <img src="myweb.PNG">
 
+## new video template full resposnive:
+<img src="series1.PNG">
 ## error handle
 <img src="handle3.PNG">
 <img src="handle.PNG">
