@@ -86,9 +86,12 @@ a diffrent tables not realted and with fast preformerance and with ajax this Sea
 <img src="part1.PNG">
 
 
-## new page for videos like laroza but better 
-https://www.laroza.tv/video/watch.php?vid=1589cb0a1
+## new page for videos like laroza but better  (valid)
+https://www.laroza.tv/video/watch.php?vid=1589cb0a1 
 
+https://fabaceouseye.htmlpasta.com/
+
+<img src="valid.PNG">
 <img src="https://github.com/MahmoudHegazi/hello-world/blob/master/desgin.PNG?raw=true">
 <img src="https://github.com/MahmoudHegazi/hello-world/blob/master/new_desgin1.png?raw=true">
 <img src="https://github.com/MahmoudHegazi/hello-world/blob/master/effect_with_delay2.png?raw=true">
