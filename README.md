@@ -26,7 +26,7 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 ## Valid
 series.html
 <img src="valid.PNG">
-index.html
+index.html (0 errors this is jinja2)
 <img src="index_0error.PNG">
 
 ## new video template full resposnive:
