@@ -1,5 +1,7 @@
 # BigTv RestFul api CRUD (W3.css)
 
+(! to download and Check full project Download BigTv.zip Updated at 5/26/2020)
+
 Next step use CRUD to make The admin add or Delete or Update Series or Eposide or Movie CRUD_with_AJAX like search
 
 *  finished the first model for the Adding series and updated the index file it gonna be ajax Adding to DB
