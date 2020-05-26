@@ -345,7 +345,9 @@ onclick="document.getElementById('id05').style.display='block'"><i class="fas fa
   <!-- a series eposide {{eposide.id}}-->
     <div class="col-sm-3" style="text-align:center;">
       <h3 style="margin-top:10px;text-align:center;">{{eposide.name}}</h3>
-      <img src="{{eposide.image}}" style="width:200px;height:150px;">	  
+<a href="{{url_for('showEposide', series_id = eposide.series_id, eposide_id = eposide.id) }}">
+        <img src="{{eposide.image}}" style="width:200px;height:150px;">
+      </a>  
     </div> 
   {% endfor %}
   </div>
@@ -384,3 +386,4 @@ document.getElementById("closeAdd1").addEventListener("click", function(){
 
 </body>
 </html>
+
