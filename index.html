@@ -138,7 +138,9 @@ input#nameInput {
   background-size: cover;
   margin-left: -38px;  
   text-align: center;
-  opcity: .1;
+  /* 
+  opacity: .1;
+  */
 }
 
 .search-container {
@@ -213,7 +215,7 @@ input#nameInput {
   text-align: center;
   font-family: Arial Black;
   background-size: cover;
-  background-repeate: no-reapate;
+  background-repeat: no-repeat;
 }
 
 .speacial_close {
@@ -229,7 +231,7 @@ input#nameInput {
   font-family: Arial Black;
   color: white;
   background-size: cover;
-  background-repeate: no-reapate;
+  background-repeat: no-repeat;
 }
 
 .speacial_ediv {
@@ -287,7 +289,7 @@ background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/2019062
   width:400px;
   margin-left:auto;
   margin-right:auto;
-  height:auto;"
+  height:auto;
 }
 
 
@@ -333,7 +335,8 @@ for (i = 0; i < close.length; i++) {
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
   <!--logo start here -->
     <a href="#home" class="w3-bar-item w3-button">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRGem63cY1hzHZhxogj6MIjRz8xBztHZqKJ9SzmjgBluF0-An52&usqp=CAU" width="30px" height="100%">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRGem63cY1hzHZhxogj6MIjRz8xBztHZqKJ9SzmjgBluF0-An52&usqp=CAU" width="30"
+	 alt="logo blue tv with some colored squares">
     <b>BIG</b> TV    
     </a>
  <!-- logo end here -->   
@@ -365,10 +368,7 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
 
 <div id="mypage" class="w3-content w3-padding" style="max-width:1564px">
 
-  <!-- Project Section -->
-  <div class="w3-container w3-padding-32" id="projects">
-    
-  </div>
+
 
   <div class="w3-row-padding main-container">
   
@@ -404,7 +404,7 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
       <form class="form-inline" id="addSeriesForm"> 
       <div class="form-group mycontianerform">
         <input name="name" type="text" class="form-control addinput" 
-        id="sName" placeholder="Series Name" onfocus="this.value=''" required="requires"> 
+        id="sName" placeholder="Series Name" onfocus="this.value=''" required="required"> 
         
         
         <input name="description" type="text" class="form-control addinput" 
@@ -414,24 +414,24 @@ onclick="document.getElementById('id01').style.display='block'"><span class="fa"
         
         
         <input name="hero" type="text" class="form-control addinput" 
-        id="sHero" placeholder="Series Hero Name" onfocus="this.value=''" required="requires">
+        id="sHero" placeholder="Series Hero Name" onfocus="this.value=''" required="required">
         
         
         <input name="image" type="text" class="form-control addinput" 
-        id="sImage" placeholder="Series Image"  onfocus="this.value=''" required="requires">
+        id="sImage" placeholder="Series Image"  onfocus="this.value=''" required="required">
         
         
         <input name="url" type="text" class="form-control addinput" 
-        id="sUrl" placeholder="add url for first eposide link in app" onfocus="this.value=''" required="requires">
+        id="sUrl" placeholder="add url for first eposide link in app" onfocus="this.value=''" required="required">
         
         
         <input name="date" type="text" class="form-control addinput" 
-        id="sDate" placeholder="Date of Series" onfocus="this.value=''" required="requires">
+        id="sDate" placeholder="Date of Series" onfocus="this.value=''" required="required">
         
         
         <input name="menuid" type="number" class="form-control addinput" 
         id="sMenuId" placeholder="Menu Id Number just 1 or 2 until now" onfocus="this.value=''"
-        min="1" max="4" required="requires">       
+        min="1" max="4" required="required">       
         
         
         <button type="submit" id="addSeriesBTN"><i class="fas fa-plus"></i></button> 
@@ -541,7 +541,7 @@ onclick="document.getElementById('id02').style.display='block'"><i class="fas fa
       <form class="form-inline" id="movieform"> 
       <div class="form-group mycontianerform">
         <input name="moviename" type="text" class="form-control addinput" 
-        id="mName" placeholder="Series Name" onfocus="this.value=''" required="requires"> 
+        id="mName" placeholder="Series Name" onfocus="this.value=''" required="required"> 
         
         
         <input name="moviedesc" type="text" class="form-control addinput" 
@@ -551,31 +551,31 @@ onclick="document.getElementById('id02').style.display='block'"><i class="fas fa
         
         
         <input name="moviehero" type="text" class="form-control addinput" 
-        id="mHero" placeholder="Series Hero Name" onfocus="this.value=''" required="requires">
+        id="mHero" placeholder="Series Hero Name" onfocus="this.value=''" required="required">
         
         
         <input name="movieimage" type="text" class="form-control addinput" 
-        id="mImage" placeholder="Series Image"  onfocus="this.value=''" required="requires">
+        id="mImage" placeholder="Series Image"  onfocus="this.value=''" required="required">
         
         
         <input name="movieurl" type="text" class="form-control addinput" 
-        id="mUrl" placeholder="add url for first eposide link in app" onfocus="this.value=''" required="requires">
+        id="mUrl" placeholder="add url for first eposide link in app" onfocus="this.value=''" required="required">
         
         
         <input name="moviedate" type="text" class="form-control addinput" 
-        id="mDate" placeholder="Date of Series" onfocus="this.value=''" required="requires">
+        id="mDate" placeholder="Date of Series" onfocus="this.value=''" required="required">
         
         
         <input name="moviemenuid" type="number" class="form-control addinput" 
         id="mMenuId" placeholder="Menu Id Number just 1 or 2 until now" onfocus="this.value=''"
-        min="1" max="4" required="requires">       
+        min="1" max="4" required="required">       
         
         
         <button type="submit" id="addMovieBTN"><i class="fas fa-plus"></i></button> 
         </div>
       </form> 
         
-        <div id="udContiner2" class="hideme">
+        <div id="udContiner3" class="hideme">
          <ul class="myhiden1">         
           <li class="item" id="successAlertMovie" role="alert" style="display:none;text-align:center" >
            <div id="resultContainer1">
@@ -613,7 +613,7 @@ onclick="document.getElementById('id03').style.display='block'"><i class="fas fa
   
   <div>
   <div class="cover">  
-  <img class="seris_img" src="{{movie.image}}" alt="series photo" width="95%" height="70%" style="margin-top:30px;margin-left:7px">
+  <img class="seris_img" src="{{movie.image}}" alt="series photo" style="margin-top:30px;margin-left:7px;width:95%;height:70%">
    </div>
    
    
@@ -661,20 +661,22 @@ onclick="document.getElementById('id04').style.display='block'"><i class="fas fa
       
       <form class="form-inline" id="searchForm"> 
       <div class="form-group mycontianerform">
-        <input name="search" type="text" class="form-control" id="nameInput" placeholder="search" name="search"
+        <input name="search" type="text" class="form-control" id="nameInput" placeholder="search" 
 		onfocus="this.value=''">        
         <button type="submit" id="searchbtn"><i class="fas fa-search"></i></button>          </div>
       </form> 
         
         <div id="udContiner" class="hideme">
          <ul class="myhiden">
-          <a id="mylink" href="">
+          
           <li class="item" id="successAlert" role="alert" style="display:none;text-align:center" >
+		    <a id="mylink" href="">
            <div id="resultContainer">
            <h3 id="sucessText"></h3><br>           
            </div>
+		    </a>
           </li>
-          </a>
+          
         </ul>
       </div>
       </div>
@@ -766,7 +768,7 @@ window.onclick = function(event) {
 <!-- Image of location/map -->
 <div class="w3-container">
   <img src="https://media.holidayme.com/wp-content/uploads/2020/04/holidayme_holy-month-of-ramadan_shutterstock_618512120.jpg" class="w3-image" style="width:100%">
-    <svg class="footera"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none" >
+    <svg class="footera" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none" alt="an image for ramdan Muslims" >
   <polygon points="100 0 100 12 0 10" fill="white"/>
 </svg>
 </div>
