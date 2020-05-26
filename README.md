@@ -23,6 +23,12 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 ## last desgin
 <img src="myweb.PNG">
 
+## Valid
+series.html
+<img src="valid.PNG">
+index.html
+<img src="index_0error.PNG">
+
 ## new video template full resposnive:
 <img src="series1.PNG">
 ## error handle
@@ -100,7 +106,7 @@ https://www.laroza.tv/video/watch.php?vid=1589cb0a1
 
 https://fabaceouseye.htmlpasta.com/
 
-<img src="valid.PNG">
+
 <img src="https://github.com/MahmoudHegazi/hello-world/blob/master/desgin.PNG?raw=true">
 <img src="https://github.com/MahmoudHegazi/hello-world/blob/master/new_desgin1.png?raw=true">
 <img src="https://github.com/MahmoudHegazi/hello-world/blob/master/effect_with_delay2.png?raw=true">
