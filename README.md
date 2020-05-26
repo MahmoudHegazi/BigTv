@@ -10,7 +10,13 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 *  added Series Menu show only the existed eposides and handle error and give user interaction
 *  like if series id not found, series eposides 0, or series deleted 
 *  added series template like larazoa series.html
-
+*  Now My search Function work and return URLs and Images By 1-Series name, 2-epoisde name, 3- movie name, 4- 17 predefined tags.
+*  added the url needed to returned with ajax to the browser then render it in the search box without reload
+*  (not alot of website you can search for new result without reload the search box or close the search model but I do.
+*  Finished the style needed and all jinja2 code for series.html video and connect it to the app
+*  tested the app and all works fine
+*  added CRUD add Series eposide.
+*  edit the video.html and make it like laroza.com (done but it better than laroza with advanced effects)
 
 ## last desgin
 <img src="myweb.PNG">
@@ -24,9 +30,10 @@ Next step use CRUD to make The admin add or Delete or Update Series or Eposide o
 
 ## what needed:
 1.  CRUD edite movie
-2.  edit the form
-3.  edit the video.html and make it like laroza.com
-4.  try the api on AWS
+2.  try the api on AWS
+3.  add form to pereare for session handling and the admin console which will only the one have ADD, delete, update functions
+4.  add full secured form or handle with google Oauth
+5.  get domain and lunch this amazing restful API
 
 
 
