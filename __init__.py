@@ -123,8 +123,10 @@ def showprocess():
         if myseries:
             message = 'https://www.google.com/'
             cname = 'A Series Founded with name %s' %myseries.name
+            # when host on AWS must edit this replace 127.0.0.1:5000 with AWS IP
+            seurl = 'http://127.0.0.1:5000/bigtv/series/%s/episodes/' %myseries.id
             imge = myseries.image
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            return jsonify({'search' : seurl, 'name' : cname, 'iurl' : imge})
             
         # if mymovie != none return json with movie link    
         if mymovie:
@@ -136,111 +138,169 @@ def showprocess():
         # if myeposide != none return json with eposide link
         if myeposide:
             message = myeposide.server1
-            imge = myeposide.image
+            imge = myeposide.image            
             cname = 'An Eposide Founded with name %s' %myeposide.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            
+            # in proudction replace 127.0.0.1:5000 with your domain or ip
+            # used to return the url needed for the emposide and provide the 2 vars to url give it to AJAX
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %myeposide.series_id 
+            epurl_part2 = "series/%s/eposide" %myeposide.id
+            fullurl = epurl_part1 + epurl_part2
+            
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
             
         if get1:
             message = get1.server1
             imge = get1.image
             cname = 'An Eposide Founded with name %s' %get1.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get1.series_id 
+            epurl_part2 = "series/%s/eposide" %get1.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
 
         if get2:
             message = get2.server1
             imge = get2.image
             cname = 'An Eposide Founded with name %s' %get2.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get2.series_id 
+            epurl_part2 = "series/%s/eposide" %get1.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
  
         if get3:
             message = get3.server1
             imge = get3.image
             cname = 'An Eposide Founded with name %s' %get3.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get3.series_id 
+            epurl_part2 = "series/%s/eposide" %get3.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
 
         if get4:
             message = get4.server1
             imge = get4.image
             cname = 'An Eposide Founded with name %s' %get4.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get4.series_id 
+            epurl_part2 = "series/%s/eposide" %get4.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
 
         if get5:
             message = get5.server1
             imge = get5.image
             cname = 'An Eposide Founded with name %s' %get5.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get5.series_id 
+            epurl_part2 = "series/%s/eposide" %get5.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
  
         if get6:
             message = get6.server1
             imge = get6.image
             cname = 'An Eposide Founded with name %s' %get6.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get6.series_id 
+            epurl_part2 = "series/%s/eposide" %get6.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
  
         if get7:
             message = get7.server1
             imge = get7.image
             cname = 'An Eposide Founded with name %s' %get7.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get7.series_id 
+            epurl_part2 = "series/%s/eposide" %get7.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
 
         if get8:
             message = get8.server1
             imge = get8.image
             cname = 'An Eposide Founded with name %s' %get8.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get8.series_id 
+            epurl_part2 = "series/%s/eposide" %get8.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
 
         if get9:
             message = get9.server1
             imge = get9.image
             cname = 'An Eposide Founded with name %s' %get9.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get9.series_id 
+            epurl_part2 = "series/%s/eposide" %get9.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
             
         if get10:
             message = get10.server1
             imge = get10.image
             cname = 'An Eposide Founded with name %s' %get10.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get10.series_id 
+            epurl_part2 = "series/%s/eposide" %get10.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
 
         if get11:
             message = get11.server1
             imge = get11.image
             cname = 'An Eposide Founded with name %s' %get11.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get11.series_id 
+            epurl_part2 = "series/%s/eposide" %get11.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
 
         if get12:
             message = get12.server1
             imge = get12.image
             cname = 'An Eposide Founded with name %s' %get12.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get12.series_id 
+            epurl_part2 = "series/%s/eposide" %get12.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
 
         if get13:
             message = get13.server1
             imge = get13.image
             cname = 'An Eposide Founded with name %s' %get13.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get13.series_id 
+            epurl_part2 = "series/%s/eposide" %get13.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
 
         if get14:
             message = get14.server1
             imge = get14.image
             cname = 'An Eposide Founded with name %s' %get14.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get14.series_id 
+            epurl_part2 = "series/%s/eposide" %get14.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
 
         if get15:
             message = get15.server1
             imge = get15.image
             cname = 'An Eposide Founded with name %s' %get15.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get15.series_id 
+            epurl_part2 = "series/%s/eposide" %get15.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})
 
         if get16:
             message = get16.server1
             imge = get16.image
             cname = 'An Eposide Founded with name %s' %get16.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})            
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get16.series_id 
+            epurl_part2 = "series/%s/eposide" %get16.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})            
 
         if get17:
             message = get17.server1
             imge = get17.image
             cname = 'An Eposide Founded with name %s' %get17.name
-            return jsonify({'search' : message, 'name' : cname, 'iurl' : imge})            
+            epurl_part1 = "http://127.0.0.1:5000/bigtv/%s/" %get17.series_id 
+            epurl_part2 = "series/%s/eposide" %get17.id
+            fullurl = epurl_part1 + epurl_part2
+            return jsonify({'search' : fullurl, 'name' : cname, 'iurl' : imge})            
     # if mytag  empty or if no result found return error 
              
     return jsonify({'error' : 'No Result Found!'})  
@@ -277,6 +337,22 @@ def addseries():
 
 
 
+
+
+#show speacific eposide video 
+
+@app.route('/bigtv/<int:series_id>/series/<int:eposide_id>' , methods=['GET', 'POST'])
+@app.route('/bigtv/<int:series_id>/series/<int:eposide_id>/eposide' , methods=['GET', 'POST'])
+def showEposide(series_id, eposide_id):
+    series = session.query(Series).filter_by(id=eposide_id).first()
+    eposide = session.query(Item).filter_by(id=eposide_id).first()
+    eposides = session.query(Item).filter_by(series_id=series_id).all()
+   
+
+    
+    return render_template('series.html', series=series, eposide=eposide, myeposides=eposides)
+
+
 # function for add new eposide
 @app.route('/addeposide', methods=['POST'])
 def addEposide():    
@@ -301,7 +377,7 @@ def addEposide():
         return jsonify({'respond' : message, 'iurl' : imge})
     print("aded")        
     # if mytag  empty or if no result found return error              
-    return jsonify({'error' : 'Sorry Problem Found! Please Try after 2 Minutes'})    
+    return jsonify({'error' : 'Sorry Problem Found! Please Try after 2 Minutes'})   
 
 
 
