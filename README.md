@@ -114,3 +114,5 @@ https://fabaceouseye.htmlpasta.com/
 <img src="https://github.com/MahmoudHegazi/hello-world/blob/master/effect_with_delay2.png?raw=true">
 <img src="https://github.com/MahmoudHegazi/hello-world/blob/master/mobile_size1.PNG?raw=true">
 www.udacity.com
+
+Thanks for https://znovation.co/ (helped me during my first interview) to focus on AJAX with Jquery and flask, to discover the power of AJAX, with easy steps can be done in minutes)
