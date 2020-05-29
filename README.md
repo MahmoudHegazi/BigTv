@@ -1,5 +1,9 @@
 # BigTv RestFul api CRUD (W3.css)
 
+
+(Video Template)
+https://lathierrecord.htmlpasta.com/
+
 (! to download and Check full project Download BigTv.zip Updated at 5/26/2020) 
 
 ##  I will continue to work on this project after I finish my new degree.
