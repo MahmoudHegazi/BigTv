@@ -51,6 +51,10 @@ index.html (0 errors this is jinja2 +I used inline style to fix height error)
 6.  add new button to series.html to make it down scrol (There is no scroll to last part button in any website 
 I'm going to add one ony my restful API.)
 
+## !9 Fusion template 
+(With button can change the desgin to more than 10 diffrent style like google but better
+not only change background change the all website layout)
+
 
 ## add new series (render text image with ajax from flask webserver)
 <img src="https://github.com/MahmoudHegazi/hello-world/blob/master/myadd2.PNG?raw=true">
