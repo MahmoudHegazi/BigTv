@@ -48,7 +48,8 @@ index.html (0 errors this is jinja2 +I used inline style to fix height error)
 3.  add form to pereare for session handling and the admin console which will only the one have ADD, delete, update functions
 4.  add full secured form or handle with google Oauth
 5.  get domain and lunch this amazing restful API
-
+6.  add new button to series.html to make it down scrol (There is no scroll to last part button in any website 
+I'm going to add one ony my restful API.)
 
 
 ## add new series (render text image with ajax from flask webserver)
