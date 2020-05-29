@@ -2,7 +2,7 @@
 
 (! to download and Check full project Download BigTv.zip Updated at 5/26/2020) 
 
-##  I will continue to work on this project until I finish my new studies.
+##  I will continue to work on this project after I finish my new degree.
 
 Next step use CRUD to make The admin add or Delete or Update Series or Eposide or Movie CRUD_with_AJAX like search
 
