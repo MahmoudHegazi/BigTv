@@ -1,6 +1,8 @@
 # BigTv RestFul api CRUD (W3.css)
 
-(! to download and Check full project Download BigTv.zip Updated at 5/26/2020)
+(! to download and Check full project Download BigTv.zip Updated at 5/26/2020) 
+
+##  I'm going to hold work on this project Until I finish my new Course
 
 Next step use CRUD to make The admin add or Delete or Update Series or Eposide or Movie CRUD_with_AJAX like search
 
