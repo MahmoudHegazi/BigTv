@@ -123,4 +123,9 @@ https://fabaceouseye.htmlpasta.com/
 <img src="https://github.com/MahmoudHegazi/hello-world/blob/master/effect_with_delay2.png?raw=true">
 <img src="https://github.com/MahmoudHegazi/hello-world/blob/master/mobile_size1.PNG?raw=true">
 
+
+## note
+using (AJAX, JQUERY, CRUD, FLASK, Database) can build resgister page inside the login page 
+(with 2 submit buttons without relaod (ignore secure mail step)) you sigin and login in one page even the home page with the popup forms I used
+next level subscribe
 Thanks for https://znovation.co/ (helped me during my first interview) to focus on AJAX with Jquery and flask, to discover the power of AJAX, with easy steps can be done in minutes)
