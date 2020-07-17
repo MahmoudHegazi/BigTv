@@ -53,7 +53,9 @@ I'm going to add one ony my restful API.)
 
 ## !9 Fusion template 
 (With button can change the desgin to more than 10 diffrent style like google but better
-not only change background change the all website layout)
+not only change background change the all website layout) then save it using webstorage forever or using cookies 
+###  or in a user table in database (CRUD update the curent website template (feature for subscribers)),
+
 
 
 ## add new series (render text image with ajax from flask webserver)
