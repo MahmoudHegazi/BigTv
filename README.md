@@ -56,7 +56,7 @@ I'm going to add one ony my restful API.)
 not only change background change the all website layout) then save it using webstorage forever or using cookies 
 ###  or in a user table in database (CRUD update the curent website template (feature for subscribers)),
 let say (if table.template == "style1" then render another template easy beasy so easy no need js code
-or anything just render another template) 
+or anything just render another template) (no website have this feature change template for users)
 
 
 
